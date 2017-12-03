@@ -16,6 +16,8 @@
     <link rel="icon" type="image/png" href="../images/favicons/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="../images/favicons/favicon-16x16.png" sizes="16x16">
 
+
+
 </head>
 <body>
 
@@ -23,13 +25,6 @@
   <?php
   	include "./temp/navbar.html";
   ?>
-<!-- <div class="inner-banner has-base-color-overlay text-center" style="background: url(../images/background/4.jpg);">
-    <div class="container">
-        <div class="box">
-            <h1>Blog Grid View</h1>
-        </div>
-    </div>
-</div> -->
 <div class="breadcumb-wrapper">
     <div class="container">
         <div class="pull-left">
@@ -45,7 +40,13 @@
     </div>
 </div>
 
-
+<section class="team-style-1 sec-padd2">
+  <div class="container">
+    <div class="section-title center">
+      <h2>ข่าว<span class="thm-color">ประชาสัมพันธ์</span></h2>
+    </div>
+  </div>
+</section>
 
 
 <section class="all-blog blog-section sec-padd2">
@@ -55,7 +56,7 @@
             <article class="col-md-4 col-sm-6 col-xs-12">
                 <div class="default-blog-news">
                     <figure class="img-holder">
-                        <a href="./news-details.php"><img src="../images/blog/1.jpg" alt="News"></a>
+                        <a href="blog-details.html"><img src="../images/blog/1.jpg" alt="News"></a>
                         <div class="inner-box">
 
                         </div>
@@ -64,7 +65,8 @@
                     <div class="lower-content">
                         <div class="category">Jan 05, 2017</div>
                         <div class="content">
-                            <a href="./news-details.php"><h4>Education For All Campaign</h4></a>
+                            <div class="post-meta">By Fardinad  |  10 Comments </div>
+                            <a href="blog-details.html"><h4>Education For All Campaign</h4></a>
                             <div class="text"><p>Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p></div>
                         </div>
                     </div>
@@ -74,7 +76,7 @@
             <article class="col-md-4 col-sm-6 col-xs-12">
                 <div class="default-blog-news">
                     <figure class="img-holder">
-                        <a href="./news-details.php"><img src="../images/blog/2.jpg" alt="News"></a>
+                        <a href="blog-details.html"><img src="../images/blog/2.jpg" alt="News"></a>
                         <div class="inner-box">
 
                         </div>
@@ -83,7 +85,8 @@
                     <div class="lower-content">
                         <div class="category">Feb 08, 2017</div>
                         <div class="content">
-                            <a href="./news-details.php"><h4>Donation food for childrens</h4></a>
+                            <div class="post-meta">By jacob  |  10 Comments </div>
+                            <a href="blog-details.html"><h4>Donation food for childrens</h4></a>
                             <div class="text"><p>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p></div>
                         </div>
                     </div>
@@ -93,7 +96,7 @@
             <article class="col-md-4 col-sm-6 col-xs-12">
                 <div class="default-blog-news">
                     <figure class="img-holder">
-                        <a href="./news-details.php"><img src="../images/blog/3.jpg" alt="News"></a>
+                        <a href="blog-details.html"><img src="../images/blog/3.jpg" alt="News"></a>
                         <div class="inner-box">
 
                         </div>
@@ -102,17 +105,14 @@
                     <div class="lower-content">
                         <div class="category">Mar 12, 2017</div>
                         <div class="content">
-                            <a href="./news-details.php"><h4>Helping Kids Grow Up Stronger</h4></a>
+                            <div class="post-meta">By Alfred  |  10 Comments </div>
+                            <a href="blog-details.html"><h4>Helping Kids Grow Up Stronger</h4></a>
                             <div class="text"><p>Soleat habemus usu, te nec eligendi deserunt vituperata. Natum consulatu vel ea, duo cetero repudiare efficiendi cu.</p></div>
                         </div>
                     </div>
                 </div>
 
             </article>
-
-
-
-
         </div>
     </div>
 </section>

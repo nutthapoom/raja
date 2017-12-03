@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=1001">
     <link rel="stylesheet" href="css/responsive.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="../images/favicons/apple-touch-icon.png">
@@ -62,202 +62,168 @@
             <h2>คณะกรรมการบริหาร <span class="thm-color">มูลนิธิโรงพยาบาลราชวิถี</span></h2>
         </div>
         <div class="row">
-            <article class="col-md-3 col-sm-6 col-xs-12">
-                <div class="single-team-member">
-                    <figure class="img-box">
-                        <img src="../images/team/pic1.png" alt="">
-                        <div class="overlay">
-                            <div class="inner-box">
-                                <ul class="social-icon">
-                                    <li><a href="team.html#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="team.html#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="team.html#"><i class="fa fa-google-plus"></i></a></li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </figure>
-                    <div class="author-info">
-                        <a href="team.html#"><h4>Felicity BNovak</h4></a>
-                        <p>CEO & Founder</p>
-                        <ul>
-                            <li><i class="fa fa-phone-square"></i>Phone: +123-456-7890</li>
-                            <li><i class="fa fa-envelope-square"></i><a href="team.html#">Felicity@Experts.com</a></li>
-                        </ul>
-                    </div>
-
-                </div>
-            </article>
-            <article class="col-md-3 col-sm-6 col-xs-12">
-                <div class="single-team-member">
-                    <figure class="img-box">
-                        <img src="../images/team/pic2-1.png" alt="">
-                        <div class="overlay">
-                            <div class="inner-box">
-                                <ul class="social">
-                                    <li><a href="team.html#"><i class="fa fa-link"></i></a></li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </figure>
-                    <div class="author-info">
-                        <a href="team.html#"><h4>Mark Richarson</h4></a>
-                        <p>Board of Trustee</p>
-                        <ul>
-                            <li><i class="fa fa-phone-square"></i>Phone: +123-456-7890</li>
-                            <li><i class="fa fa-envelope-square"></i><a href="team.html#">Felicity@Experts.com</a></li>
-                        </ul>
-                    </div>
-
-                </div>
-            </article>
-            <article class="col-md-3 col-sm-6 col-xs-12">
-                <div class="single-team-member">
-                    <figure class="img-box">
-                        <a href="team.html#"><img src="../images/team/t3.jpg" alt=""></a>
-                        <div class="overlay">
-                            <div class="inner-box">
-                                <ul class="social">
-                                    <li><a href="team.html#"><i class="fa fa-link"></i></a></li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </figure>
-                    <div class="author-info">
-                        <a href="team.html#"><h4>Jom Caraleno</h4></a>
-                        <p>Board of Trustee</p>
-                        <ul>
-                            <li><i class="fa fa-phone-square"></i>Phone: +123-456-7890</li>
-                            <li><i class="fa fa-envelope-square"></i><a href="team.html#">Felicity@Experts.com</a></li>
-                        </ul>
-                    </div>
-
-                </div>
-            </article>
-            <article class="col-md-3 col-sm-6 col-xs-12">
-                <div class="single-team-member">
-                    <figure class="img-box">
-                        <a href="team.html#"><img src="../images/team/t4.jpg" alt=""></a>
-                        <div class="overlay">
-                            <div class="inner-box">
-                                <ul class="social">
-                                    <li><a href="team.html#"><i class="fa fa-link"></i></a></li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </figure>
-                    <div class="author-info">
-                        <a href="team.html#"><h4>Asahtan Marsh</h4></a>
-                        <p>Board of Advisor</p>
-                        <ul>
-                            <li><i class="fa fa-phone-square"></i>Phone: +123-456-7890</li>
-                            <li><i class="fa fa-envelope-square"></i><a href="team.html#">Felicity@Experts.com</a></li>
-                        </ul>
-                    </div>
-
-                </div>
-            </article>
-
-            <article class="col-md-3 col-sm-6 col-xs-12">
-                <div class="single-team-member">
-                    <figure class="img-box">
-                        <a href="team.html#"><img src="../images/team/t5.jpg" alt=""></a>
-                        <div class="overlay">
-                            <div class="inner-box">
-                                <ul class="social">
-                                    <li><a href="team.html#"><i class="fa fa-link"></i></a></li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </figure>
-                    <div class="author-info">
-                        <a href="team.html#"><h4>Jack Sweapson</h4></a>
-                        <p>Board of Advisor</p>
-                        <ul>
-                            <li><i class="fa fa-phone-square"></i>Phone: +123-456-7890</li>
-                            <li><i class="fa fa-envelope-square"></i><a href="team.html#">Felicity@Experts.com</a></li>
-                        </ul>
-                    </div>
-
-                </div>
-            </article>
-            <article class="col-md-3 col-sm-6 col-xs-12">
-                <div class="single-team-member">
-                    <figure class="img-box">
-                        <a href="team.html#"><img src="../images/team/t6.jpg" alt=""></a>
-                        <div class="overlay">
-                            <div class="inner-box">
-                                <ul class="social">
-                                    <li><a href="team.html#"><i class="fa fa-link"></i></a></li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </figure>
-                    <div class="author-info">
-                        <a href="team.html#"><h4>Chris Tremain</h4></a>
-                        <p>Organisor</p>
-                        <ul>
-                            <li><i class="fa fa-phone-square"></i>Phone: +123-456-7890</li>
-                            <li><i class="fa fa-envelope-square"></i><a href="team.html#">Felicity@Experts.com</a></li>
-                        </ul>
-                    </div>
-
-                </div>
-            </article>
-            <article class="col-md-3 col-sm-6 col-xs-12">
-                <div class="single-team-member">
-                    <figure class="img-box">
-                        <a href="team.html#"><img src="../images/team/t7.jpg" alt=""></a>
-                        <div class="overlay">
-                            <div class="inner-box">
-                                <ul class="social">
-                                    <li><a href="team.html#"><i class="fa fa-link"></i></a></li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </figure>
-                    <div class="author-info">
-                        <a href="team.html#"><h4>Astley Fletcher</h4></a>
-                        <p>Manager</p>
-                        <ul>
-                            <li><i class="fa fa-phone-square"></i>Phone: +123-456-7890</li>
-                            <li><i class="fa fa-envelope-square"></i><a href="team.html#">Felicity@Experts.com</a></li>
-                        </ul>
-                    </div>
-
-                </div>
-            </article>
-            <article class="col-md-3 col-sm-6 col-xs-12">
-                <div class="single-team-member">
-                    <figure class="img-box">
-                        <a href="team.html#"><img src="../images/team/t8.jpg" alt=""></a>
-                        <div class="overlay">
-                            <div class="inner-box">
-                                <ul class="social">
-                                    <li><a href="team.html#"><i class="fa fa-link"></i></a></li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </figure>
-                    <div class="author-info">
-                        <a href="team.html#"><h4>William Linnette</h4></a>
-                        <p>Accountant</p>
-                        <ul>
-                            <li><i class="fa fa-phone-square"></i>Phone: +123-456-7890</li>
-                            <li><i class="fa fa-envelope-square"></i><a href="team.html#">Felicity@Experts.com</a></li>
-                        </ul>
-                    </div>
-
-                </div>
-            </article>
-
+          <article class="col-md-12 col-sm-12">
+              <div class="single-team-member">
+                  <figure class="img-box">
+                      <img src="../images/content/pic1.jpg" alt="">
+                  </figure>
+                  <div class="author-info">
+                      <h4>นายแพทย์มานัส  โพธาภรณ์</h4>
+                      <p>ประธานกรรมการ</p>
+                  </div>
+              </div>
+          </article>
+        </div>
+        <div class="row">
+          <article class="col-md-6 col-sm-6">
+              <div class="single-team-member">
+                  <figure class="img-box">
+                      <img src="../images/content/pic2-1.jpg" alt="">
+                  </figure>
+                  <div class="author-info">
+                      <h4>นายแพทย์ดิเรก  ลิมจิตติ</h4>
+                      <p>รองประธานและกรรมการผู้จัดการ</p>
+                  </div>
+              </div>
+          </article>
+          <article class="col-md-6 col-sm-6">
+              <div class="single-team-member">
+                  <figure class="img-box">
+                      <img src="../images/content/pic2-2.jpg" alt="">
+                  </figure>
+                  <div class="author-info">
+                      <h4>แพทย์หญิงสุดสวาท  เลาหวินิจ</h4>
+                      <p>รองประธานกรรมการ</p>
+                  </div>
+              </div>
+          </article>
+        </div>
+        <div class="row">
+          <article class="col-md-3 col-sm-6">
+              <div class="single-team-member">
+                  <figure class="img-box">
+                      <img src="../images/content/pic1.jpg" alt="">
+                  </figure>
+                  <div class="author-info">
+                      <h4>นายแพทย์มานัส  โพธาภรณ์</h4>
+                      <p>กรรมการ</p>
+                  </div>
+              </div>
+          </article>
+          <article class="col-md-3 col-sm-6">
+              <div class="single-team-member">
+                  <figure class="img-box">
+                      <img src="../images/content/pic1.jpg" alt="">
+                  </figure>
+                  <div class="author-info">
+                      <h4>นายแพทย์มานัส  โพธาภรณ์</h4>
+                      <p>กรรมการ</p>
+                  </div>
+              </div>
+          </article>
+          <article class="col-md-3 col-sm-6">
+              <div class="single-team-member">
+                  <figure class="img-box">
+                      <img src="../images/content/pic1.jpg" alt="">
+                  </figure>
+                  <div class="author-info">
+                      <h4>นายแพทย์มานัส  โพธาภรณ์</h4>
+                      <p>กรรมการ</p>
+                  </div>
+              </div>
+          </article>
+          <article class="col-md-3 col-sm-6">
+              <div class="single-team-member">
+                  <figure class="img-box">
+                      <img src="../images/content/pic1.jpg" alt="">
+                  </figure>
+                  <div class="author-info">
+                      <h4>นายแพทย์มานัส  โพธาภรณ์</h4>
+                      <p>กรรมการ</p>
+                  </div>
+              </div>
+          </article>
+        </div>
+        <div class="row">
+          <article class="col-md-3 col-sm-6">
+              <div class="single-team-member">
+                  <figure class="img-box">
+                      <img src="../images/content/pic1.jpg" alt="">
+                  </figure>
+                  <div class="author-info">
+                      <h4>นายแพทย์อุดม  เชาวรินทร์</h4>
+                      <p>กรรมการ</p>
+                  </div>
+              </div>
+          </article>
+          <article class="col-md-3 col-sm-6">
+              <div class="single-team-member">
+                  <figure class="img-box">
+                      <img src="../images/content/pic1.jpg" alt="">
+                  </figure>
+                  <div class="author-info">
+                      <h4>นางสาวเบญจวรรณ  ขัมภรัตน์</h4>
+                      <p>กรรมการ</p>
+                  </div>
+              </div>
+          </article>
+          <article class="col-md-3 col-sm-6">
+              <div class="single-team-member">
+                  <figure class="img-box">
+                      <img src="../images/content/pic1.jpg" alt="">
+                  </figure>
+                  <div class="author-info">
+                      <h4>นายแพทย์ปราการ ถมยางกูร</h4>
+                      <p>กรรมการ</p>
+                  </div>
+              </div>
+          </article>
+          <article class="col-md-3 col-sm-6">
+              <div class="single-team-member">
+                  <figure class="img-box">
+                      <img src="../images/content/pic1.jpg" alt="">
+                  </figure>
+                  <div class="author-info">
+                      <h4>นางสาวประนอม  ดวงใจ</h4>
+                      <p>กรรมการ</p>
+                  </div>
+              </div>
+          </article>
+        </div>
+        <div class="row">
+          <article class="col-md-4 col-sm-6">
+              <div class="single-team-member">
+                  <figure class="img-box">
+                      <img src="../images/content/pic1.jpg" alt="">
+                  </figure>
+                  <div class="author-info">
+                      <h4>นางสาวอุทัยวรรณ สิงหะอุดม</h4>
+                      <p>กรรมการ</p>
+                  </div>
+              </div>
+          </article>
+          <article class="col-md-4 col-sm-6">
+              <div class="single-team-member">
+                  <figure class="img-box">
+                      <img src="../images/content/pic1.jpg" alt="">
+                  </figure>
+                  <div class="author-info">
+                      <h4>นางนิยม  ประสงค์สัมฤทธิ์</h4>
+                      <p>กรรมการเลขานุการ</p>
+                  </div>
+              </div>
+          </article>
+          <article class="col-md-4 col-sm-6">
+              <div class="single-team-member">
+                  <figure class="img-box">
+                      <img src="../images/content/pic1.jpg" alt="">
+                  </figure>
+                  <div class="author-info">
+                      <h4>นางรำไพพรรณ  มีชูรส</h4>
+                      <p>กรรมการเหรัญญิก</p>
+                  </div>
+              </div>
+          </article>
         </div>
     </div>
 

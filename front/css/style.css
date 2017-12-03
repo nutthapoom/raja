@@ -1174,7 +1174,7 @@ input,textarea {font-family: 'Roboto', sans-serif;display: block; font-size: 16p
 }
 
 .main-header .logo-outer .logo {
-  margin-top: 20px;
+  margin-top: 2px;
 }
 
 .main-header .logo-outer .logo img{
@@ -4801,10 +4801,13 @@ input,textarea {font-family: 'Roboto', sans-serif;display: block; font-size: 16p
   position: relative;
   overflow: hidden;
   display: block;
+  background-color: aliceblue;
+  text-align: center;
 }
 .team-style-1 .single-team-member .img-box img {
   transition: all 0.5s ease;
   transform: scale(1);
+  text-align: center;
 }
 
 
@@ -4817,7 +4820,7 @@ input,textarea {font-family: 'Roboto', sans-serif;display: block; font-size: 16p
 
 
 
-.team-style-1 .single-team-member:before {
+/*.team-style-1 .single-team-member:before {
   pointer-events: none;
   position: absolute;
   content: '';
@@ -4828,13 +4831,13 @@ input,textarea {font-family: 'Roboto', sans-serif;display: block; font-size: 16p
   opacity: 0;
   background: #f7f7f7;
   transition: .7s ease;
-}
+}*/
 
-.team-style-1 .single-team-member:hover:before {
+/*.team-style-1 .single-team-member:hover:before {
   opacity: 1;
   height: 100%;
   transition: .7s ease;
-}
+}*/
 
 
 .team-style-1 .single-team-member .img-box .overlay {
@@ -4905,8 +4908,9 @@ input,textarea {font-family: 'Roboto', sans-serif;display: block; font-size: 16p
 
 .team-style-1 .single-team-member h4 {
   color: #303030;
-  margin-top: 12px;
+  margin-top: 6px;
   margin-bottom: 6px;
+  font-size: 16px;
 }
 .team-style-1 .single-team-member .author-info {
   position: relative;
@@ -4920,7 +4924,9 @@ input,textarea {font-family: 'Roboto', sans-serif;display: block; font-size: 16p
 .team-style-1 .single-team-member p {
   color: #fb5e1c;
   transition: .5s ease;
-  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 0px;
 }
 
 .team-style-1 .single-team-member .text {
@@ -4928,7 +4934,7 @@ input,textarea {font-family: 'Roboto', sans-serif;display: block; font-size: 16p
 
 }
 
-.team-style-1 .single-team-member ul {padding-top: 10px;display: none;}
+/*.team-style-1 .single-team-member ul {padding-top: 10px;display: none;}
 .team-style-1 .single-team-member ul li {color: #949494;margin: 4px 0;}
 .team-style-1 .single-team-member ul li a {color: #949494;}
 .team-style-1 .single-team-member .author-info ul li i {
@@ -4940,7 +4946,7 @@ input,textarea {font-family: 'Roboto', sans-serif;display: block; font-size: 16p
   width: 15px;
   text-align: center;
   line-height: 15px;
-}
+}*/
 
 
 /***
