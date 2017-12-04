@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+  </body>
+</html>
+<?php
+  require_once '../libs/conn.php';
+  date_default_timezone_set("Asia/Bangkok");
+  $m_fname = 	$_POST['inputName'];
+  $m_lname = $_POST['inputLastName'];
+  $m_mail = $_POST['inputEmail'];
+  $m_tel = $_POST['inputPhone'];
+  $m_user = $_POST['inputUser'];
+  $m_pass = hash('sha256', $_POST['inputPassword']);
+
+  $query = "SELECT mem_user FROM t_member WHERE mem_user = '$m_user' ";
+  $res = mysqli_query($conn,$query);
+  $row  = mysqli_num_rows($res);
+
+  $i = 0;
+
+  if ($row > $i) {
+    include_once'../script/username.php';
+  }else {
+
+  //Insert Data
+  $strSQL = "INSERT INTO t_member";
+  $strSQL .= "(mem_id, mem_fname, mem_lname, mem_mail, mem_phone, mem_user, mem_pass, date_create)";
+  $strSQL .= "VALUES ";
+  $strSQL.= "('','$m_fname','$m_lname','$m_mail','$m_tel','$m_user','$m_pass','".date('Y-m-d H:i:s')."')";
+
+  $objQuery = mysqli_query($conn,$strSQL);
+
+  if($objQuery){
+    // include_once'../script/member_add.php';
+    // refresh("../manage/member.php");
+  }else {
+    echo "เกิดข้อผิดพลาด ".mysqli_error($conn);
+  }
+
+}
+
+  mysqli_close($conn);
+?>
+
+<script language="javascript">
+function goBack() {
+    window.location.href = "../manage/member.php"
+}
+    // window.location.href = "frontpage/index.php"
+</script>
