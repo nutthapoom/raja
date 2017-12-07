@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="css/style.css?v=1002">
     <link rel="stylesheet" href="css/responsive.css">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="images/fvicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="images/fvicons/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="images/fvicons/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/fvicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../images/fvicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../images/fvicons/favicon-16x16.png" sizes="16x16">
 
 
 
@@ -50,39 +50,45 @@
     </div>
 </div>
 
-<section class="team-style-1 sec-padd2">
+<section class="about sec-padd2">
   <div class="container">
     <div class="row">
         <div class="col-sm-2"></div>
         <div class="col-sm-8" >
-         <p>1. บริจาคได้โดยตรงที <strong>ผู้อำนวยการโรงพยาบาลราชวิถี, ประธานมูลนิธิราชวิถี </strong>เบอร์โทร. 0-2354-8138 ต่อ 3217-9<br><br>
-         2. บริจาค ณ จุดรับบริจาคมูลนิธิโรงพยาบาลราชวิถี ชั้น 1 ตึกสิริธร โรงพยาบาลราชวิถี
-         <br><br>
-         3. บริจาคผ่านทางเคาน์เตอร์ธนาคาร ชื่อบัญชี"มูลนิธิโรงพยาบาลราชวิถี" ดังนี้
-         <br><br>
+          <div class="content">
+            <div class="text">
+              <p>&emsp;1. บริจาคได้โดยตรงที <strong>ผู้อำนวยการโรงพยาบาลราชวิถี, ประธานมูลนิธิราชวิถี </strong>เบอร์โทร. 0-2354-8138 ต่อ 3217-9<br></p>
+              <p>&emsp;2. บริจาค ณ จุดรับบริจาคมูลนิธิโรงพยาบาลราชวิถี ชั้น 1 ตึกสิริธร โรงพยาบาลราชวิถี
+              <br></p>
+              <p>&emsp;3. บริจาคผ่านทางเคาน์เตอร์ธนาคาร ชื่อบัญชี"มูลนิธิโรงพยาบาลราชวิถี" ดังนี้
+              <br>
+              </p>
+            </div>
+          </div>
          <div class="row">
-         <div class="col-sm-1"></div>
-              <article class="col-md-10 center">
-                <div class="row">
+          <article class="col-md-10 center">
+            <div class="row">
                   <div class="col-md-12 col-sm-12 center">
                     <div class="img-box"><img src="../images/content/donate3.jpg" alt="" class="img-rounded"></div><br>
                   </div>
                 </div>
               </article>
-            <div class="col-sm-1" ></div>
          </div>
-         </p>
-         <br><br>
-         <p>
-         4. บริจาคโดยเช็คบุคคล หรือเช็คธนาคาร สั่งจ่าย <strong>"มูลนิธิโรงพยาบาลราชวิถี"</strong> ขีดคร่อม A/C PAYEE ONLY และ "หรือผู้ถือ" <br>&emsp;ธนาคาร..................หมายเลขเช็ค..................
-         <br><br>
-         5. บริจาคโดยธนาณัติ สั่งจ่าย <strong>"มูลนิธิโรงพยาบาลราชวิถี ปณ.ราชเทวี 10401"</strong>
-         </p>
-         <br><br>
+
+         <br>
+        <div class="content">
+          <div class="text">
+            <p>
+            4. บริจาคโดยเช็คบุคคล หรือเช็คธนาคาร สั่งจ่าย <strong>"มูลนิธิโรงพยาบาลราชวิถี"</strong> ขีดคร่อม A/C PAYEE ONLY และ "หรือผู้ถือ"&emsp;ธนาคาร..................หมายเลขเช็ค..................
+            <br>
+            5. บริจาคโดยธนาณัติ สั่งจ่าย <strong>"มูลนิธิโรงพยาบาลราชวิถี ปณ.ราชเทวี 10401"</strong>
+            </p>
+          </div>
+        </div>
         <div class="col-sm-12" style="background-color:lavenderblush;">
           <br>
           <p>
-          &emsp;&emsp;(กรณีโอนเงินบริจาคผ่านธนาคาร ขอใหเส่งสำเนาสลิปฝากเงินได้ที่ <strong>เบอร์แฟกซ์ 02-354-7996 หรือส่ง E-mail : rejavithihospitalfoundation@gmail.com</strong>
+          &emsp;&emsp;(กรณีโอนเงินบริจาคผ่านธนาคาร ขอให้ส่งสำเนาสลิปฝากเงินได้ที่ <strong>เบอร์แฟกซ์ 02-354-7996 หรือส่ง E-mail : rejavithihospitalfoundation@gmail.com</strong>
            ระบุชื่อ-นามสกุลผู้บริจาค พร้อมที่อยู่ที่สามารถติดต่อได้ เเละระบุวัตถุประสงค์ของการบริจาค เพื่อมูลนิธิฯ จะได้จัดส่งใบเสร็จรับเงินให้ท่าน เพื่อนำไปลดหย่อนภาษีได้ประจำปีนั้น)
           </p>
          <br>

@@ -8,7 +8,7 @@ if(isset($_POST["id"]))
    $res_select = mysqli_query($conn, $sql_select);
    $news_img = mysqli_fetch_row($res_select);
    $filename = $news_img[0];
-   unlink('../images/news-img/'.$filename);
+   unlink('../images/news/img/'.$filename);
 
    // Delete Data
    $str = "DELETE FROM t_news_img WHERE nimg_id = '".$id."'";

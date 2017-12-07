@@ -23,7 +23,7 @@ require_once '../libs/conn.php';
   $res_img = mysqli_query($conn, $sql_img);
   while($row = mysqli_fetch_assoc($res_img))
   {
-  unlink('../images/news-img/'.$row["nimg_img"]);
+  unlink('../images/news/img/'.$row["nimg_img"]);
   }
 
   // Delete Data

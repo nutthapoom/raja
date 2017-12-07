@@ -50,7 +50,7 @@ require_once '../libs/conn.php';
       <div class="container">
           <div class="row">
             <?php
-            $query_img  = "SELECT * FROM t_news WHERE ntype_id = '3' ORDER BY news_id DESC";
+            $query_img  = "SELECT * FROM t_news WHERE ntype_id = '2' ORDER BY news_id DESC";
             $res_img = mysqli_query($conn,$query_img);
             if(mysqli_num_rows($res_img) > 0){
               while($row_img = mysqli_fetch_assoc($res_img))

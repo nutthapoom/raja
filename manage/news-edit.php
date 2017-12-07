@@ -67,12 +67,6 @@ $row  = mysqli_fetch_assoc($res);
                 </div>
               </div>
               <div class="form-group row">
-                <label for="inputLink" class="col-sm-2 col-form-label">Link Youtube</label>
-                <div class="col-sm-10">
-                  <textarea class="form-control" id="inputLink" name="inputLink" rows="2"><?php echo $row['news_link']; ?></textarea>
-                </div>
-              </div>
-              <div class="form-group row">
                 <div class="col-sm-2">สถานะ</div>
                 <div class="col-sm-10">
                       <?php if ($row['news_hot'] == "1"){?>

@@ -54,10 +54,7 @@ $row  = mysqli_fetch_assoc($res);
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-sm-12">
-                <div class="post-area sec-padd">
-                  <figure class="img-holder">
-                      <a href="#"><img src="../images/news/<?php echo $row["news_img"]; ?>" alt=""></a>
-                  </figure>
+                <div class="post-area sec-form">
                     <article class="classic-blog-news">
                         <figure class="img-holder">
                             <img src="../images/news/<?php echo $row["news_img"]; ?>" alt="News">
@@ -66,7 +63,6 @@ $row  = mysqli_fetch_assoc($res);
                             </div> -->
                         </figure>
                         <div class="lower-content">
-                            <!-- <div class="category">Mar 12, 2017</div> -->
                             <div class="share-box clearfix">
                                 <!-- <ul class="tag-box pull-left"> -->
                                     <div class="category">Mar 12, 2017</div>
@@ -80,7 +76,7 @@ $row  = mysqli_fetch_assoc($res);
                                     </ul>
                                 </div>
                             </div>
-                            <div class="content">
+                            <div class="col-md-12 content">
                               <div class="post-meta">By Admin</div>
                               <h4><?php echo $row["news_topic"]; ?></h4></a>
                               <div class="text">
@@ -92,25 +88,33 @@ $row  = mysqli_fetch_assoc($res);
                                 $res_img = mysqli_query($conn,$query_img);
                                 if(mysqli_num_rows($res_img) > 0){
                                 ?>
-                                <div class="section-title">
-                                <h5>&emsp;&emsp;Send Your <span class="thm-color">Message</span></h5>
+                              <div class="section-title">
+                                <h5>&emsp;&emsp;<span class="thm-color">รูปภาพประกอบ</span></h5>
                               </div>
-                              <?php
-                              while($row_img = mysqli_fetch_assoc($res_img))
-                                {
-                              ?>
-                              <?php
-                                }
-                              }
-                              ?>
+                              <section class="gallery .no-padd style-2">
+                                <?php
+                                while($row_img = mysqli_fetch_assoc($res_img))
+                                  {
+                                ?>
+                                <article class="col-md-4 col-sm-6 col-xs-12 filter-item Children">
+                                  <div class="item">
+                                    <img src="../images/news/img/<?php echo $row_img["nimg_img"]; ?>" alt="">
+                                      </div>
+                                </article>
+                                <?php
+                                  }
+                                ?>
+                              </section>
+                          <?php
+                            }
+                            ?>
                             </div>
                         </div>
                     </article>
                 </div>
-
             </div>
             <div class="col-md-4 col-sm-12">
-                <div class="blog-sidebar sec-padd">
+                <div class="blog-sidebar sec-form20">
                     <div class="popular_news">
                         <div class="section-title style-2">
                             <h4>ข่าวอื่นที่น่าสนใจ</h4>
@@ -134,9 +138,6 @@ $row  = mysqli_fetch_assoc($res);
                             </div>
                         </div>
                     </div>
-
-
-
                 </div>
             </div>
 

@@ -117,6 +117,11 @@ input,textarea {font-family: 'Roboto', sans-serif;display: block; font-size: 16p
   padding: 40px 0 0;
 }
 
+.sec-form20 {
+  padding: 20px 0 0;
+}
+
+
 
 .sec-form2 {
   padding: 20px 0 10px;
@@ -192,6 +197,7 @@ input,textarea {font-family: 'Roboto', sans-serif;display: block; font-size: 16p
 }
 .float_right {
     float: right;
+    padding-bottom: 15px;
 }
 
 .border-bottom {
@@ -245,13 +251,13 @@ input,textarea {font-family: 'Roboto', sans-serif;display: block; font-size: 16p
 
 .thm-btn.style-3 {
   background: transparent;
-  color: #fff;
-  border-color: #fff;
+  color: #eb3096;
+  border-color: #eb3096;
 }
 .thm-btn.style-3:hover {
-  background: #FFF;
-  color: #eb3096;
-  border-color: #fff;
+  background: #eb3096;
+  color: #fff;
+  border-color: #eb3096;
 }
 
 
@@ -276,7 +282,6 @@ input,textarea {font-family: 'Roboto', sans-serif;display: block; font-size: 16p
   font-size: 20px;
   text-transform: uppercase;
   font-weight: 700;
-  padding-bottom: 20px;
 }
 
 .section-title h2:after {
@@ -1818,8 +1823,8 @@ input,textarea {font-family: 'Roboto', sans-serif;display: block; font-size: 16p
   color: #eb3096;
 }
 .urgent-cause2 .content p {
-  margin-bottom: 20px;
-  border-bottom: 1px solid #f4f4f4;
+  /*margin-bottom: 20px;
+  border-bottom: 1px solid #f4f4f4;*/
   padding-bottom: 15px;
 }
 

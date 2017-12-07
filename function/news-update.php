@@ -14,7 +14,6 @@ require_once '../libs/conn.php';
   date_default_timezone_set("Asia/Bangkok");
   $n_id = 	$_POST['n_id'];
   $n_topic = 	$_POST['inputTopic'];
-  $n_link = $_POST['inputLink'];
   $n_detail = 	$_POST['inputDetail'];
 
   if (is_uploaded_file($_FILES['inputImg']['tmp_name'])){
@@ -53,7 +52,7 @@ require_once '../libs/conn.php';
   }
 
   //Update Data
-  $strSQL = "UPDATE t_news SET news_topic = '$n_topic', news_detail = '$n_detail', news_link = '$n_link', date_change = '".date('Y-m-d H:i:s')."' ";
+  $strSQL = "UPDATE t_news SET news_topic = '$n_topic', news_detail = '$n_detail', date_change = '".date('Y-m-d H:i:s')."' ";
   $strSQL .= "WHERE news_id = '$n_id'";
 
   $objQuery = mysqli_query($conn,$strSQL);

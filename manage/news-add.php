@@ -62,12 +62,6 @@ require_once '../libs/conn.php';
                 </div>
               </div>
               <div class="form-group row">
-                <label for="inputLink" class="col-sm-2 col-form-label">Link Youtube</label>
-                <div class="col-sm-10">
-                  <textarea class="form-control" id="inputLink" name="inputLink" rows="2"></textarea>
-                </div>
-              </div>
-              <div class="form-group row">
                 <div class="col-sm-2">สถานะ</div>
                 <div class="col-sm-10">
                   <div class="form-check">

@@ -48,9 +48,9 @@ require_once '../libs/conn.php';
 
   //Insert Data
   $strSQL = "INSERT INTO t_news";
-  $strSQL .= "(news_id, news_topic, news_detail, news_img, news_link, news_hot, date_create, date_change, ntype_id, mem_id)";
+  $strSQL .= "(news_id, news_topic, news_detail, news_img,  news_hot, date_create, date_change, ntype_id, mem_id)";
   $strSQL .= "VALUES ";
-  $strSQL .= "('','$n_topic','$n_detail','$new_file_name','$n_link','$n_hot','".date('Y-m-d H:i:s')."','".date('Y-m-d H:i:s')."','$t_id','1')";
+  $strSQL .= "('','$n_topic','$n_detail','$new_file_name','$n_hot','".date('Y-m-d H:i:s')."','".date('Y-m-d H:i:s')."','$t_id','1')";
   $objQuery = mysqli_query($conn,$strSQL);
 
   if($objQuery){
