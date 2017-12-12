@@ -53,50 +53,10 @@ require_once '../libs/conn.php';
         </div>
     </div>
 </div>
-
-
 <section class="urgent-cause2 with-bg sec-padd3">
     <div class="container">
       <div class="section-title center">
-          <h2>สมทบทุนสร้างอาคาร <span class="thm-color">ศูนย์การแพทย์ราชวิถี</span></h2>
-      </div>
-      <?php
-      $query_img  = "SELECT * FROM t_cause WHERE ctype_id = '1' ORDER BY cause_id DESC";
-      $res_img = mysqli_query($conn,$query_img);
-      if(mysqli_num_rows($res_img) > 0){
-      ?>
-        <div class="row col-md-12">
-      <?php
-        while($row_img = mysqli_fetch_assoc($res_img))
-        {
-      ?>
-      <article class="item col-md-4 col-sm-6 col-xs-12">
-          <figure class="img-box">
-              <img src="../images/causes/<?php echo $row_img['cause_img']; ?>" alt="">
-              <div class="overlay"><div class="inner-box"><div class="content-box"><a href="medical-donate.php" class="thm-btn style-2 donate-box-btn">บริจาค</a></div></div></div>
-          </figure>
-
-          <div class="content">
-              <div class="text center">
-                  <a href="cause-detail.php?id=<?php echo $row_img['cause_id']; ?>"><h4 class="title"><?php echo $row_img['cause_topic']; ?></h4></a>
-                  <p></p>
-              </div>
-          </div>
-
-      </article>
-      <?php
-        }
-      ?>
-      </div>
-      <?php
-      }
-      ?>
-    </div>
-</section>
-<section class="urgent-cause2 with-bg sec-form20">
-    <div class="container">
-      <div class="section-title center">
-          <h2>ซื้อครุภัณฑ์ / <span class="thm-color">ครุภัณฑ์ทางการแพทย์</span></h2>
+          <h2>เรื่องราวของชีวิต<span class="thm-color"> ที่ได้ไปต่อ</span></h2>
       </div>
       <?php
       $query_news  = "SELECT * FROM t_cause WHERE ctype_id = '2' ORDER BY cause_id DESC";
@@ -132,6 +92,44 @@ require_once '../libs/conn.php';
     </div>
 </section>
 
+<section class="urgent-cause2 with-bg sec-form20">
+    <div class="container">
+      <div class="section-title center">
+          <h2>ผู้ร่วมสร้างกุศล<span class="thm-color"> อันเป็นนิรันดร์</span></h2>
+      </div>
+      <?php
+      $query_img  = "SELECT * FROM t_cause WHERE ctype_id = '1' ORDER BY cause_id DESC";
+      $res_img = mysqli_query($conn,$query_img);
+      if(mysqli_num_rows($res_img) > 0){
+      ?>
+        <div class="row col-md-12">
+      <?php
+        while($row_img = mysqli_fetch_assoc($res_img))
+        {
+      ?>
+      <article class="item col-md-4 col-sm-6 col-xs-12">
+          <figure class="img-box">
+              <img src="../images/causes/<?php echo $row_img['cause_img']; ?>" alt="">
+              <div class="overlay"><div class="inner-box"><div class="content-box"><a href="medical-donate.php" class="thm-btn style-2 donate-box-btn">บริจาค</a></div></div></div>
+          </figure>
+
+          <div class="content">
+              <div class="text center">
+                  <a href="cause-detail.php?id=<?php echo $row_img['cause_id']; ?>"><h4 class="title"><?php echo $row_img['cause_topic']; ?></h4></a>
+                  <p></p>
+              </div>
+          </div>
+
+      </article>
+      <?php
+        }
+      ?>
+      </div>
+      <?php
+      }
+      ?>
+    </div>
+</section>
 
 <!--Footer Bottom-->
 <?php

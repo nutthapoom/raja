@@ -9,9 +9,7 @@ require_once '../libs/conn.php';
   }elseif ($pass == '') {
     echo "Check Password";
   }else{
-    $query = "SELECT * FROM t_member
-              WHERE mem_user = '$user'
-              AND mem_pass = '$pass'";
+    $query = "SELECT * FROM t_member WHERE mem_user = '$user' AND mem_pass = '$pass'";
     $res = mysqli_query($conn,$query);
     $row = mysqli_fetch_assoc($res);
     if(!$row){

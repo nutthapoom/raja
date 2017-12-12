@@ -19,7 +19,7 @@ if (isset($_SESSION['timeout'])) {
     if ($session_life > $inactive) {
       ?>
         <script language="javascript">
-            window.location.href = "./function/logout.php"
+            window.location.href = "../function/logout.php"
         </script>
       <?php
     }

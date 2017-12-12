@@ -51,7 +51,7 @@
 <section class="about sec-padd2">
   <div class="container">
     <div class="section-title center">
-      <h2>การบริจาคสมทบทุน  <span class="thm-color">“ศูนย์การแพทย์ราชวิถี”</span></h2>
+      <h2><span class="thm-color">“ศูนย์การแพทย์ราชวิถี”</span></h2>
     </div>
     <div class="jumbotron">
       <div class="container">

@@ -33,7 +33,7 @@ require_once '../libs/conn.php';
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="item active">
-        <img src="../images/slider/slide1.jpg" alt="Los Angeles" style="width:100%;">
+        <img src="../images/slider/slide-1.jpg" alt="Los Angeles" style="width:100%;">
 				<div class="carousel-caption">
           <div class="slide-content-box">
               <div class="button">
@@ -43,7 +43,7 @@ require_once '../libs/conn.php';
 				</div>
       </div>
       <div class="item">
-        <img src="../images/slider/slide2.jpg" alt="Los Angeles" style="width:100%;">
+        <img src="../images/slider/slide-2.jpg" alt="Los Angeles" style="width:100%;">
 				<div class="carousel-caption">
           <div class="slide-content-box">
               <div class="button">
@@ -53,7 +53,7 @@ require_once '../libs/conn.php';
 				</div>
       </div>
       <div class="item">
-        <img src="../images/slider/slide3.jpg" alt="Los Angeles" style="width:100%;">
+        <img src="../images/slider/slide-3.jpg" alt="Los Angeles" style="width:100%;">
 				<div class="carousel-caption">
           <div class="slide-content-box">
               <div class="button">
@@ -63,7 +63,7 @@ require_once '../libs/conn.php';
 				</div>
       </div>
       <div class="item">
-        <img src="../images/slider/slide4.jpg" alt="Los Angeles" style="width:100%;">
+        <img src="../images/slider/slide-4.jpg" alt="Los Angeles" style="width:100%;">
 				<div class="carousel-caption">
           <div class="slide-content-box">
               <div class="button">
@@ -72,48 +72,6 @@ require_once '../libs/conn.php';
           </div>
 				</div>
       </div>
-      <div class="item">
-        <img src="../images/slider/slide5.jpg" alt="Los Angeles" style="width:100%;">
-				<div class="carousel-caption">
-          <div class="slide-content-box">
-              <div class="button">
-                  <a class="thm-btn donate-box-btn" href="medical-donate.php">บริจาค</a>
-              </div>
-          </div>
-				</div>
-      </div>
-      <div class="item">
-        <img src="../images/slider/slide6.jpg" alt="Los Angeles" style="width:100%;">
-				<div class="carousel-caption">
-          <div class="slide-content-box">
-              <div class="button">
-                  <a class="thm-btn donate-box-btn" href="medical-donate.php">บริจาค</a>
-              </div>
-          </div>
-				</div>
-      </div>
-      <div class="item">
-        <img src="../images/slider/slide7.jpg" alt="Los Angeles" style="width:100%;">
-				<div class="carousel-caption">
-          <div class="slide-content-box">
-              <div class="button">
-                  <a class="thm-btn donate-box-btn" href="medical-donate.php">บริจาค</a>
-              </div>
-          </div>
-				</div>
-      </div>
-      <div class="item">
-        <img src="../images/slider/slide8.jpg" alt="Los Angeles" style="width:100%;">
-				<div class="carousel-caption">
-          <div class="slide-content-box">
-              <div class="button">
-                  <a class="thm-btn donate-box-btn" href="medical-donate.php">บริจาค</a>
-              </div>
-          </div>
-				</div>
-      </div>
-
-
     </div>
 
 
@@ -158,7 +116,7 @@ require_once '../libs/conn.php';
 
                 <div class="content">
                     <div class="text center">
-                        <a href="cause-detail2.php"><h4 class="title"><?php echo $row_img['cause_topic']; ?></h4></a>
+                        <a href="cause-detail.php?id=<?php echo $row_img['cause_id']; ?>"><h4 class="title"><?php echo $row_img['cause_topic']; ?></h4></a>
                         <p></p>
                     </div>
                 </div>
