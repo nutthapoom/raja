@@ -1,5 +1,5 @@
 <?php
-require_once '../libs/conn.php';
+require_once './session.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,12 +13,12 @@ require_once '../libs/conn.php';
 <?php
   date_default_timezone_set("Asia/Bangkok");
   $s_title = 	$_POST['inputName'];
-  $s_detail = 	$_POST['inputDetail'];
+  // $s_detail = 	$_POST['inputDetail'];
   $s_hot = 1;
   //PART 3: Defining variables
   if (isset($_FILES['inputFile']['name']))// do this, otherwise you'll have a notice message
   {
-    $image_path = "../images/slide/"; //the folder that stores your image
+    $image_path = "../images/slider/"; //the folder that stores your image
     $image_ext = pathinfo(basename($_FILES['inputFile']['name']), PATHINFO_EXTENSION);//นามสกุลไฟล์
     $new_file_name = 's_'.uniqid().".".$image_ext;//uniqid() ค่าสุ่ม
 
@@ -30,11 +30,10 @@ require_once '../libs/conn.php';
 
   if(!in_array($ImageExt, $allowedExts))
   {
-    // include_once'../script/update_fail.php';
+    echo "เกิดข้อผิดพลาด ".mysqli_error($conn);
   }
 
   //upload image
-
 
   $image_upload_path = $image_path.$new_file_name;
   $success = move_uploaded_file($_FILES['inputFile']['tmp_name'],$image_upload_path);
@@ -45,9 +44,9 @@ require_once '../libs/conn.php';
 
   //Insert Data
   $strSQL = "INSERT INTO t_slide";
-  $strSQL .= "(slide_id, slide_title, slide_detail, slide_img, slide_hot, date_create, mem_id)";
+  $strSQL .= "(slide_id, slide_title, slide_img, slide_hot, date_create, mem_id)";
   $strSQL .= "VALUES ";
-  $strSQL.= "('','$s_title','$s_detail','$new_file_name','$s_hot','".date('Y-m-d H:i:s')."','1')";
+  $strSQL.= "('','$s_title','$new_file_name','$s_hot','".date('Y-m-d H:i:s')."','$s_login_id')";
 
   $objQuery = mysqli_query($conn,$strSQL);
 

@@ -52,7 +52,7 @@
 
 <section class="about sec-padd2">
     <div class="container">
-      <section class="team-style-1 sec-form">
+      <section class="team-style-1 sec-form20">
         <div class="container">
           <div class="section-title center">
             <h2>การติดต่อ <span class="thm-color">มูลนิธิ</span></h2>
@@ -73,7 +73,7 @@
           <div class="col-sm-2" ></div>
       </div>
 
-      <section class="team-style-1 sec-padd2">
+      <section class="team-style-1 sec-form">
         <div class="container">
           <div class="section-title center">
             <h2>ที่อยู่ <span class="thm-color">มูลนิธิ</span></h2>

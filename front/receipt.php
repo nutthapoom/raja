@@ -1,3 +1,6 @@
+<?php
+require_once '../libs/conn.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,9 +15,9 @@
     <link rel="stylesheet" href="css/style.css?v=1001">
     <link rel="stylesheet" href="css/responsive.css">
 
-    <!-- <link rel="apple-touch-icon" sizes="180x180" href="../images/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="../images/favicons/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="../images/favicons/favicon-16x16.png" sizes="16x16"> -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../images/fvicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../images/fvicons/favicon-16x16.png" sizes="16x16">
 
 
 
@@ -38,7 +41,7 @@
         <div class="pull-left">
             <ul class="list-inline link-list">
                 <li>
-                    <a href="index.html">หน้าหลัก</a>
+                    <a href="index.php">หน้าหลัก</a>
                 </li>
                 <li>
                   ขอใบเสร็จรับบริจาค
@@ -62,63 +65,63 @@
       <div class="row">
         <div class="panel panel-danger">
           <div class="panel-heading">
-            <h3 class="panel-title">ข้อมูลผู้บริจาค ( กรุณากรอกรายละเอียดให้ครบถ้วนในส่วนที่มีเครื่องหมาย * )</h3>
+            <h3 class="panel-title">ข้อมูลผู้บริจาค ( กรุณากรอกรายละเอียดให้ครบถ้วน )</h3>
           </div>
           <div class="panel-body">
-            <form class="form-horizontal">
+            <form action="../function/receipt.php" method="post" class="form-horizontal" enctype="multipart/form-data">
               <div class="form-group">
-                <label for="company" class="col-sm-3 col-md-offset-1 control-label">ชื่อและนามสกุล/หน่วยงาน/องค์กรณ์/บริษัท</label>
+                <label for="companyInput" class="col-sm-3 col-md-offset-1 control-label">ชื่อและนามสกุล/หน่วยงาน/องค์กรณ์/บริษัท</label>
                 <div class="col-sm-7">
-                  <input type="text" class="form-control" id="company" placeholder="">
+                  <input type="text" class="form-control" id="companyInput" name="companyInput" placeholder="" required="">
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputTel" class="col-sm-3 col-md-offset-1 control-label">โทรศัพท์</label>
+                <label for="telInput" class="col-sm-3 col-md-offset-1 control-label">โทรศัพท์</label>
                 <div class="col-sm-7">
-                  <input type="tel" class="form-control" id="inputTel" placeholder="">
+                  <input type="tel" class="form-control" id="telInput" name="telInput" placeholder="" required="">
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputEmail" class="col-sm-3 col-md-offset-1 control-label">อีเมล</label>
+                <label for="mailInput" class="col-sm-3 col-md-offset-1 control-label">อีเมล</label>
                 <div class="col-sm-7">
-                  <input type="email" class="form-control" id="inputEmail" placeholder="">
+                  <input type="email" class="form-control" id="mailInput" name="mailInput" placeholder="" required="">
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputMoney" class="col-sm-3 col-md-offset-1 control-label">จำนวนเงิน</label>
+                <label for="moneyInput" class="col-sm-3 col-md-offset-1 control-label">จำนวนเงิน</label>
                 <div class="col-sm-7">
-                  <input type="text" class="form-control" id="inputMoney" placeholder="">
+                  <input type="text" class="form-control" id="moneyInput" name="moneyInput" placeholder="10,000.00" required="">
                 </div>
               </div><div class="form-group">
-                <label for="inputEmail3" class="col-sm-3 col-md-offset-1 control-label">วิธีการบริจาค</label>
+                <label for="tranCheck" class="col-sm-3 col-md-offset-1 control-label">วิธีการบริจาค</label>
                 <div class="col-sm-7">
                   <div class="checkbox">
                     <label>
-                      <input type="checkbox" value="">
+                      <input type="checkbox" name="tranCheck[]" value="เคาน์เตอร์เซอร์วิส">
                       เคาน์เตอร์เซอร์วิส
                     </label>
                   </div>
                   <div class="checkbox">
                     <label>
-                      <input type="checkbox" value="">
+                      <input type="checkbox" name="tranCheck[]" value="เช็คสั่งจ่าย มูลนิธิโรงพยาบาลราชวิถี">
                       เช็ค สั่งจ่าย "มูลนิธิโรงพยาบาลราชวิถี"
                     </label>
                   </div>
                   <div class="checkbox">
                     <label>
-                      <input type="checkbox" value="">
-                      ธนาณัติ สั่งจ่าย "มูลนิธิโรงพยาบาลราชวิถี "
+                      <input type="checkbox" name="tranCheck[]" value="ธนาณัติ สั่งจ่าย มูลนิธิโรงพยาบาลราชวิถี">
+                      ธนาณัติ สั่งจ่าย "มูลนิธิโรงพยาบาลราชวิถี"
                     </label>
                   </div>
                   <div class="checkbox">
                     <label>
-                      <input type="checkbox" value="">
+                      <input type="checkbox" name="tranCheck[]" value="เคาน์เตอร์ ธนาคาร">
                        เคาน์เตอร์ ธนาคาร
                     </label>
                   </div>
                   <div class="checkbox">
                     <label>
-                      <input type="checkbox" value="">
+                      <input type="checkbox" name="tranCheck[]" value="โอนเงินผ่าน ATM">
                       โอนเงินผ่าน ATM
                     </label>
                   </div>
@@ -127,59 +130,62 @@
               <div class="form-group">
                 <label for="inputBank" class="col-sm-3 col-md-offset-1 control-label">โอนเงินผ่านธนาคาร</label>
                 <div class="col-sm-7">
-                  <select class="form-control">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
+                  <select name="bankInput" class="form-control">
+                    <option value="0"> --- รายชื่อธนาคารและเลขที่บัญชี --- </option>
+                    <?php
+                      $query  = "SELECT * FROM t_bank ORDER BY bank_id ASC";
+                      $res    = mysqli_query($conn,$query);
+                      while ($row = mysqli_fetch_assoc($res)) {
+                        echo '<option value = "'.$row['bank_id'].'">'.$row['bank_name']."&nbsp;".$row["bank_major"]."&nbsp;".$row["bank_num"].'</option>';
+                      }
+                    ?>
                   </select>
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputDate" class="col-sm-3 col-md-offset-1 control-label">วัน เวลา ที่โอน</label>
+                <label for="dateInput" class="col-sm-3 col-md-offset-1 control-label">วัน เวลา ที่โอน</label>
                 <div class="col-sm-7">
-                  <input type="datetime" class="form-control" id="inputDate" placeholder="">
+                  <input type="datetime" class="form-control" id="dateInput" name="dateInput" placeholder="01-01-2017 10:00">
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputEmail3" class="col-sm-3 col-md-offset-1 control-label">ชื่อ นามสกุล และที่อยู่ที่ท่านต้องการให้ปรากฏในใบเสร็จ</label>
+                <label for="nsendInput" class="col-sm-3 col-md-offset-1 control-label">ชื่อ นามสกุล และที่อยู่ที่ท่านต้องการให้ปรากฏในใบเสร็จ</label>
                 <div class="col-sm-7">
-                  <textarea class="form-control" rows="3"></textarea>
+                  <textarea class="form-control" name="nsendInput" rows="3"></textarea>
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputAddress" class="col-sm-3 col-md-offset-1 control-label">ชื่อ นามสกุล และที่อยู่ที่ท่านต้องการให้จัดส่งใบเสร็จ ( กรุณากรอกให้ถูกต้อง )</label>
+                <label for="addressInput" class="col-sm-3 col-md-offset-1 control-label">ชื่อ นามสกุล และที่อยู่ที่ท่านต้องการให้จัดส่งใบเสร็จ ( กรุณากรอกให้ถูกต้อง )</label>
                 <div class="col-sm-7">
-                  <textarea class="form-control" rows="3"></textarea>
+                  <textarea class="form-control" name="addressInput" rows="3"></textarea>
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputSend" class="col-sm-3 col-md-offset-1 control-label">การจัดส่งใบเสร็จ</label>
+                <label for="sendCheck" class="col-sm-3 col-md-offset-1 control-label">การจัดส่งใบเสร็จ</label>
                 <div class="col-sm-7">
                   <div class="checkbox">
                     <label>
-                      <input type="checkbox" value="">
+                      <input type="checkbox" name="sendCheck[]" value="อีเมล">
                       ทางอีเมล
                     </label>
                   </div>
                   <div class="checkbox">
                     <label>
-                      <input type="checkbox" value="">
+                      <input type="checkbox" name="sendCheck[]" value="ไปรษณีย์">
                       ทางไปรษณีย์
                     </label>
                   </div>
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputEmail3" class="col-sm-3 col-md-offset-1 control-label">แนบภาพสลิปโอนเงิน ( gif jpg png)</label>
+                <label for="slipInput" class="col-sm-3 col-md-offset-1 control-label">แนบภาพสลิปโอนเงิน ( gif jpg png)</label>
                 <div class="col-sm-7">
-                  <input type="file" id="exampleInputFile">
+                  <input type="file" class="form-control-file" id="inputImg" name="inputImg" required>
                 </div>
               </div>
               <div class="form-group">
                 <div class="col-sm-offset-4 col-sm-7">
-                  <button type="submit" class="thm-btn">ยืนยัน</button>
+                  <button type="submit" class="thm-btn" data-loading-text="Please wait...">ยืนยัน</button>
                 </div>
               </div>
             </form>

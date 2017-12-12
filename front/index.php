@@ -1,3 +1,6 @@
+<?php
+require_once '../libs/conn.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,8 +11,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-
-	<link rel="stylesheet" href="css/style.css?v=1006">
+	<link rel="stylesheet" href="css/style.css?v=1007">
 	<link rel="stylesheet" href="css/responsive.css">
 
 	<link rel="apple-touch-icon" sizes="180x180" href="../images/fvicons/apple-touch-icon.png">
@@ -20,7 +22,6 @@
 
 </head>
 <body>
-
 <div class="boxed_wrapper">
 <?php
 	include "./temp/navbar.html";
@@ -29,290 +30,104 @@
 
 <!--Start rev slider wrapper-->
 <section class="rev_slider_wrapper">
-    <div id="slider1" class="rev_slider"  data-version="5.0">
-        <ul>
-            <li data-transition="fade">
-                <img src="../images/slider/11.jpg"  alt="" width="1920" height="600" data-bgposition="top center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="1" >
-                <div class="tp-caption tp-resizeme"
-                    data-x="center" data-hoffset="-90"
-                    data-y="top" data-voffset="375"
-                    data-transform_idle="o:1;"
-                    data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
-                    data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
-                    data-splitin="none"
-                    data-splitout="none"
-                    data-responsive_offset="on"
-                    data-start="2300">
-                    <div class="slide-content-box">
-                        <div class="button">
-                            <a class="thm-btn donate-box-btn" href="medical-donate.php">donate us</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="tp-caption tp-resizeme"
-                    data-x="center" data-hoffset="90"
-                    data-y="top" data-voffset="375"
-                    data-transform_idle="o:1;"
-                    data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
-                    data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
-                    data-splitin="none"
-                    data-splitout="none"
-                    data-responsive_offset="on"
-                    data-start="2600">
-                    <div class="slide-content-box">
-                        <div class="button">
-                            <a class="thm-btn style-3" href="cause.php">our causes</a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li data-transition="fade">
-                <img src="../images/slider/12.jpg"  alt="" width="1920" height="600" data-bgposition="top center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="1" >
-                <div class="tp-caption tp-resizeme"
-                    data-x="center" data-hoffset="-90"
-                    data-y="top" data-voffset="375"
-                    data-transform_idle="o:1;"
-                    data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
-                    data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
-                    data-splitin="none"
-                    data-splitout="none"
-                    data-responsive_offset="on"
-                    data-start="2300">
-                    <div class="slide-content-box">
-                        <div class="button">
-                            <a class="thm-btn donate-box-btn" href="medical-donate.php">donate us</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="tp-caption tp-resizeme"
-                    data-x="center" data-hoffset="90"
-                    data-y="top" data-voffset="375"
-                    data-transform_idle="o:1;"
-                    data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
-                    data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
-                    data-splitin="none"
-                    data-splitout="none"
-                    data-responsive_offset="on"
-                    data-start="2600">
-                    <div class="slide-content-box">
-                        <div class="button">
-                            <a class="thm-btn style-3" href="cause.php">our causes</a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li data-transition="fade">
-                <img src="../images/slider/13.jpg"  alt="" width="1920" height="600" data-bgposition="top center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="1" >
-                <div class="tp-caption tp-resizeme"
-                    data-x="center" data-hoffset="-90"
-                    data-y="top" data-voffset="375"
-                    data-transform_idle="o:1;"
-                    data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
-                    data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
-                    data-splitin="none"
-                    data-splitout="none"
-                    data-responsive_offset="on"
-                    data-start="2300">
-                    <div class="slide-content-box">
-                        <div class="button">
-                            <a class="thm-btn donate-box-btn" href="medical-donate.php">donate us</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="tp-caption tp-resizeme"
-                    data-x="center" data-hoffset="90"
-                    data-y="top" data-voffset="375"
-                    data-transform_idle="o:1;"
-                    data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
-                    data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
-                    data-splitin="none"
-                    data-splitout="none"
-                    data-responsive_offset="on"
-                    data-start="2600">
-                    <div class="slide-content-box">
-                        <div class="button">
-                            <a class="thm-btn style-3" href="cause.php">our causes</a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-						<li data-transition="fade">
-                <img src="../images/slider/14.jpg"  alt="" width="1920" height="600" data-bgposition="top center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="1" >
-                <div class="tp-caption tp-resizeme"
-                    data-x="center" data-hoffset="-90"
-                    data-y="top" data-voffset="375"
-                    data-transform_idle="o:1;"
-                    data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
-                    data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
-                    data-splitin="none"
-                    data-splitout="none"
-                    data-responsive_offset="on"
-                    data-start="2300">
-                    <div class="slide-content-box">
-                        <div class="button">
-                            <a class="thm-btn donate-box-btn" href="medical-donate.php">donate us</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="tp-caption tp-resizeme"
-                    data-x="center" data-hoffset="90"
-                    data-y="top" data-voffset="375"
-                    data-transform_idle="o:1;"
-                    data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
-                    data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
-                    data-splitin="none"
-                    data-splitout="none"
-                    data-responsive_offset="on"
-                    data-start="2600">
-                    <div class="slide-content-box">
-                        <div class="button">
-                            <a class="thm-btn style-3" href="cause.php">our causes</a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-						<li data-transition="fade">
-                <img src="../images/slider/15.jpg"  alt="" width="1920" height="600" data-bgposition="top center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="1" >
-                <div class="tp-caption tp-resizeme"
-                    data-x="center" data-hoffset="-90"
-                    data-y="top" data-voffset="375"
-                    data-transform_idle="o:1;"
-                    data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
-                    data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
-                    data-splitin="none"
-                    data-splitout="none"
-                    data-responsive_offset="on"
-                    data-start="2300">
-                    <div class="slide-content-box">
-                        <div class="button">
-                            <a class="thm-btn donate-box-btn" href="medical-donate.php">donate us</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="tp-caption tp-resizeme"
-                    data-x="center" data-hoffset="90"
-                    data-y="top" data-voffset="375"
-                    data-transform_idle="o:1;"
-                    data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
-                    data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
-                    data-splitin="none"
-                    data-splitout="none"
-                    data-responsive_offset="on"
-                    data-start="2600">
-                    <div class="slide-content-box">
-                        <div class="button">
-                            <a class="thm-btn style-3" href="cause.php">our causes</a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-						<li data-transition="fade">
-                <img src="../images/slider/16.jpg"  alt="" width="1920" height="600" data-bgposition="top center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="1" >
-                <div class="tp-caption tp-resizeme"
-                    data-x="center" data-hoffset="-90"
-                    data-y="top" data-voffset="375"
-                    data-transform_idle="o:1;"
-                    data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
-                    data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
-                    data-splitin="none"
-                    data-splitout="none"
-                    data-responsive_offset="on"
-                    data-start="2300">
-                    <div class="slide-content-box">
-                        <div class="button">
-                            <a class="thm-btn donate-box-btn" href="medical-donate.php"></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="tp-caption tp-resizeme"
-                    data-x="center" data-hoffset="90"
-                    data-y="top" data-voffset="375"
-                    data-transform_idle="o:1;"
-                    data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
-                    data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
-                    data-splitin="none"
-                    data-splitout="none"
-                    data-responsive_offset="on"
-                    data-start="2600">
-                    <div class="slide-content-box">
-                        <div class="button">
-                            <a class="thm-btn style-3" href="cause.php">our causes</a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-						<li data-transition="fade">
-                <img src="../images/slider/17.jpg"  alt="" width="1920" height="600" data-bgposition="top center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="1" >
-                <div class="tp-caption tp-resizeme"
-                    data-x="center" data-hoffset="-90"
-                    data-y="top" data-voffset="375"
-                    data-transform_idle="o:1;"
-                    data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
-                    data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
-                    data-splitin="none"
-                    data-splitout="none"
-                    data-responsive_offset="on"
-                    data-start="2300">
-                    <div class="slide-content-box">
-                        <div class="button">
-                            <a class="thm-btn donate-box-btn" href="medical-donate.php">donate us</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="tp-caption tp-resizeme"
-                    data-x="center" data-hoffset="90"
-                    data-y="top" data-voffset="375"
-                    data-transform_idle="o:1;"
-                    data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
-                    data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
-                    data-splitin="none"
-                    data-splitout="none"
-                    data-responsive_offset="on"
-                    data-start="2600">
-                    <div class="slide-content-box">
-                        <div class="button">
-                            <a class="thm-btn style-3" href="cause.php">our causes</a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-						<li data-transition="fade">
-                <img src="../images/slider/18.jpg"  alt="" width="1920" height="600" data-bgposition="top center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="1" >
-                <div class="tp-caption tp-resizeme"
-                    data-x="center" data-hoffset="-90"
-                    data-y="top" data-voffset="375"
-                    data-transform_idle="o:1;"
-                    data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
-                    data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
-                    data-splitin="none"
-                    data-splitout="none"
-                    data-responsive_offset="on"
-                    data-start="2300">
-                    <div class="slide-content-box">
-                        <div class="button">
-                            <a class="thm-btn donate-box-btn" href="medical-donate.php">donate us</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="tp-caption tp-resizeme"
-                    data-x="center" data-hoffset="90"
-                    data-y="top" data-voffset="375"
-                    data-transform_idle="o:1;"
-                    data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;"
-                    data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
-                    data-splitin="none"
-                    data-splitout="none"
-                    data-responsive_offset="on"
-                    data-start="2600">
-                    <div class="slide-content-box">
-                        <div class="button">
-                            <a class="thm-btn style-3" href="cause.php">our causes</a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-        </ul>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="../images/slider/slide1.jpg" alt="Los Angeles" style="width:100%;">
+				<div class="carousel-caption">
+          <div class="slide-content-box">
+              <div class="button">
+                  <a class="thm-btn donate-box-btn" href="medical-donate.php">บริจาค</a>
+              </div>
+          </div>
+				</div>
+      </div>
+      <div class="item">
+        <img src="../images/slider/slide2.jpg" alt="Los Angeles" style="width:100%;">
+				<div class="carousel-caption">
+          <div class="slide-content-box">
+              <div class="button">
+                  <a class="thm-btn donate-box-btn" href="medical-donate.php">บริจาค</a>
+              </div>
+          </div>
+				</div>
+      </div>
+      <div class="item">
+        <img src="../images/slider/slide3.jpg" alt="Los Angeles" style="width:100%;">
+				<div class="carousel-caption">
+          <div class="slide-content-box">
+              <div class="button">
+                  <a class="thm-btn donate-box-btn" href="medical-donate.php">บริจาค</a>
+              </div>
+          </div>
+				</div>
+      </div>
+      <div class="item">
+        <img src="../images/slider/slide4.jpg" alt="Los Angeles" style="width:100%;">
+				<div class="carousel-caption">
+          <div class="slide-content-box">
+              <div class="button">
+                  <a class="thm-btn donate-box-btn" href="medical-donate.php">บริจาค</a>
+              </div>
+          </div>
+				</div>
+      </div>
+      <div class="item">
+        <img src="../images/slider/slide5.jpg" alt="Los Angeles" style="width:100%;">
+				<div class="carousel-caption">
+          <div class="slide-content-box">
+              <div class="button">
+                  <a class="thm-btn donate-box-btn" href="medical-donate.php">บริจาค</a>
+              </div>
+          </div>
+				</div>
+      </div>
+      <div class="item">
+        <img src="../images/slider/slide6.jpg" alt="Los Angeles" style="width:100%;">
+				<div class="carousel-caption">
+          <div class="slide-content-box">
+              <div class="button">
+                  <a class="thm-btn donate-box-btn" href="medical-donate.php">บริจาค</a>
+              </div>
+          </div>
+				</div>
+      </div>
+      <div class="item">
+        <img src="../images/slider/slide7.jpg" alt="Los Angeles" style="width:100%;">
+				<div class="carousel-caption">
+          <div class="slide-content-box">
+              <div class="button">
+                  <a class="thm-btn donate-box-btn" href="medical-donate.php">บริจาค</a>
+              </div>
+          </div>
+				</div>
+      </div>
+      <div class="item">
+        <img src="../images/slider/slide8.jpg" alt="Los Angeles" style="width:100%;">
+				<div class="carousel-caption">
+          <div class="slide-content-box">
+              <div class="button">
+                  <a class="thm-btn donate-box-btn" href="medical-donate.php">บริจาค</a>
+              </div>
+          </div>
+				</div>
+      </div>
+
+
     </div>
+
+
+
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
 </section>
 <!--End rev slider wrapper-->
 <section class="urgent-cause2 sec-padd3">
@@ -323,62 +138,84 @@
                     <h2>ศูนย์การแพทย์ <span class="thm-color">ราชวิถี</span></h2>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-4 col-xs-12"><div class="link float_right"><a href="./cause.php" class="thm-btn style-2">All Causes</a></div></div>
+            <div class="col-md-3 col-sm-4 col-xs-12"><div class="link float_right"><a href="./cause.php" class="thm-btn style-2">เคสทั้งหมด</a></div></div>
         </div>
-
-        <div class="row">
+				<?php
+				$query_img  = "SELECT * FROM t_cause WHERE cause_hot = '1' ORDER BY cause_id DESC LIMIT 3";
+				$res_img = mysqli_query($conn,$query_img);
+				if(mysqli_num_rows($res_img) > 0){
+					?>
+					<div class="row">
+					<?php
+					while($row_img = mysqli_fetch_assoc($res_img))
+					{
+					?>
             <article class="item col-md-4 col-sm-6 col-xs-12">
                 <figure class="img-box">
-                    <img src="../images/content/cause2.jpg" alt="">
-                    <div class="overlay"><div class="inner-box"><div class="content-box"><a href="medical-donate.php" class="thm-btn style-2 donate-box-btn">donate now</a></div></div></div>
+                    <img src="../images/causes/<?php echo $row_img['cause_img']; ?>" alt="">
+                    <div class="overlay"><div class="inner-box"><div class="content-box"><a href="medical-donate.php" class="thm-btn style-2 donate-box-btn">บริจาค</a></div></div></div>
                 </figure>
 
                 <div class="content">
                     <div class="text center">
-                        <a href="cause-detail2.php"><h4 class="title">ชีวิตที่ได้ไปต่อ (2)</h4></a>
-                        <p>Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                        <a href="cause-detail2.php"><h4 class="title"><?php echo $row_img['cause_topic']; ?></h4></a>
+                        <p></p>
                     </div>
                 </div>
-
             </article>
-            <article class="item col-md-4 col-sm-6 col-xs-12">
-                <figure class="img-box">
-                    <img src="../images/content/cause1.jpg" alt="">
-                    <div class="overlay"><div class="inner-box"><div class="content-box"><a href="medical-donate.php" class="thm-btn style-2 donate-box-btn">donate now</a></div></div></div>
-                </figure>
-
-                <div class="content">
-
-
-                    <div class="text center">
-                        <a href="cause-detail.php"><h4 class="title">ชีวิตที่ได้ไปต่อ (1)</h4></a>
-                        <!-- <p>Estas soleat habemus usu, te nec eligendi deserunt vituperata. Natum consulatu vel ea, duo cetero repudiare efficiendi cu.</p> -->
-                    </div>
-
-
-                </div>
-
-            </article>
-            <article class="item col-md-4 col-sm-6 col-xs-12">
-                <figure class="img-box">
-                    <img src="../images/content/cause.jpg" alt="">
-                    <div class="overlay"><div class="inner-box"><div class="content-box"><a href="medical-donate.php" class="thm-btn style-2 donate-box-btn">donate now</a></div></div></div>
-                </figure>
-
-                <div class="content">
-                    <div class="text center">
-                        <a href="#"><h4 class="title">The people to help themselves</h4></a>
-                        <!-- <p>Agosto ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p> -->
-                    </div>
-
-                </div>
-
-            </article>
-
-        </div>
+						<?php
+							}
+							?>
+							</div>
+						<?php
+						}
+						?>
     </div>
 </section>
-<section class="about with-bg sec-padd2">
+<section class="gallery with-bg sec-padd2">
+    <div class="container">
+        <div class="section-title center">
+            <h2>ร่วมสมทบทุน <span class="thm-color">ซื้อเครื่องมือแพทย์</span></h2>
+        </div>
+        <div class="gallery-carousel">
+            <article class="item">
+                <div class="inner-box">
+                    <img src="../images/slider/s1.jpg" alt="">
+                </div>
+            </article>
+            <article class="item">
+                <div class="inner-box">
+                    <img src="../images/slider/s2.jpg" alt="">
+                </div>
+            </article>
+            <article class="item">
+                <div class="inner-box">
+                    <img src="../images/slider/s3.jpg" alt="">
+                </div>
+
+            </article>
+            <article class="item">
+                <div class="inner-box">
+                    <img src="../images/slider/s4.jpg" alt="">
+                </div>
+
+            </article>
+            <article class="item">
+                <div class="inner-box">
+                    <img src="../images/slider/s5.jpg" alt="">
+                </div>
+
+            </article>
+            <article class="item">
+                <div class="inner-box">
+                    <img src="../images/slider/s6.jpg" alt="">
+                </div>
+            </article>
+        </div>
+    </div>
+
+</section>
+<section class="about sec-form40">
     <div class="container">
         <div class="section-title2 center">
             <h2>วัตถุประสงค์ของ <span class="thm-color">มูลนิธิโรงพยาบาลราชวิถี</span></h2>
@@ -405,20 +242,27 @@
 
     </div>
 </section>
-<section class="gallery sec-padd">
+<section class="gallery with-bg sec-padd">
     <div class="container">
         <div class="section-title center">
             <h2>ข่าวกิจกรรม <span class="thm-color">มูลนิธิโรงพยาบาลราชวิถี</span></h2>
         </div>
         <div class="gallery-carousel">
+					<?php
+					$query_act  = "SELECT * FROM t_activ WHERE act_hot = '1' ORDER BY act_id DESC LIMIT 3";
+					$res_act = mysqli_query($conn,$query_act);
+					if(mysqli_num_rows($res_act) > 0){
+						while($row_act = mysqli_fetch_assoc($res_act))
+						{
+						?>
             <article class="item">
                 <div class="inner-box">
-                    <img src="../images/content/3.jpg" alt="">
+                    <img src="../images/activ/<?php echo $row_act['act_img']; ?>" alt="">
                     <div class="overlay">
                         <div class="top">
                             <div class="box">
                                 <div class="content">
-                                    <a data-group="1" href="../images/content/3.jpg" class="img-popup thm-btn">view project</a>
+                                    <a data-group="1" href="../images/activ/<?php echo $row_act['act_img']; ?>" class="img-popup thm-btn">ดูกิจกรรม</a>
                                 </div>
                             </div>
                         </div>
@@ -426,153 +270,54 @@
                 </div>
 
             </article>
-            <article class="item">
-                <div class="inner-box">
-                    <img src="../images/content/4.jpg" alt="">
-                    <div class="overlay">
-                        <div class="top">
-                            <div class="box">
-                                <div class="content">
-                                    <a data-group="1" href="../images/content/4.jpg" class="img-popup thm-btn">view project</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </article>
-            <article class="item">
-                <div class="inner-box">
-                    <img src="../images/content/1.jpg" alt="">
-                    <div class="overlay">
-                        <div class="top">
-                            <div class="box">
-                                <div class="content">
-                                    <a data-group="1" href="../images/content/1.jpg" class="img-popup thm-btn">view project</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </article>
-            <article class="item">
-                <div class="inner-box">
-                    <img src="../images/content/3.jpg" alt="">
-                    <div class="overlay">
-                        <div class="top">
-                            <div class="box">
-                                <div class="content">
-                                    <a data-group="1" href="../images/content/3.jpg" class="img-popup thm-btn">view project</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </article>
-            <article class="item">
-                <div class="inner-box">
-                    <img src="../images/content/4.jpg" alt="">
-                    <div class="overlay">
-                        <div class="top">
-                            <div class="box">
-                                <div class="content">
-                                    <a data-group="1" href="../images/content/4.jpg" class="img-popup thm-btn">view project</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </article>
-            <article class="item">
-                <div class="inner-box">
-                    <img src="../images/content/1.jpg" alt="">
-                    <div class="overlay">
-                        <div class="top">
-                            <div class="box">
-                                <div class="content">
-                                    <a data-group="1" href="../images/content/1.jpg" class="img-popup thm-btn">view project</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </article>
+						<?php
+							}
+						}
+						?>
         </div>
     </div>
-
 </section>
-<section class="blog-section with-bg sec-padd2">
+<section class="blog-section sec-padd2">
     <div class="container">
 			<div class="section-title center">
 					<h2>ข่าวประชาสัมพันธ์ <span class="thm-color">มูลนิธิโรงพยาบาลราชวิถี</span></h2>
 			</div>
-        <div class="row">
+			<?php
+			$query_news  = "SELECT * FROM t_news WHERE news_hot = '1' ORDER BY news_id DESC LIMIT 3";
+			$res_news = mysqli_query($conn,$query_news);
+			if(mysqli_num_rows($res_news) > 0){
+				?>
+				<div class="row">
+				<?php
+				while($row_news = mysqli_fetch_assoc($res_news))
+				{
+				?>
             <article class="col-md-4 col-sm-6 col-xs-12">
                 <div class="default-blog-news">
                     <figure class="img-holder">
-                        <a href="blog-details.html"><img src="../images/content/33.JPG" alt="News"></a>
+                        <a href="news-details.php?id=<?php echo $row_news['news_id']; ?>"><img src="../images/news/<?php echo $row_news['news_img']; ?>" alt="News"></a>
                         <div class="inner-box">
 
                         </div>
 
                     </figure>
                     <div class="lower-content">
-                        <div class="category">Jan 05, 2017</div>
+                        <div class="category"><?php echo $row_news['date_change']; ?></div>
                         <div class="content">
-                            <a href="blog-details.html"><h4>ประกาศรับสมัคร "เจ้าหน้าที่ธุรการ"</h4></a>
-                            <div class="post-meta">By Fardinad  |  10 Comments </div>
-                            <div class="text"><p>Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p></div>
+                            <a href="news-details.php?id=<?php echo $row_news['news_id']; ?>"><h4><?php echo $row_news['news_topic']; ?></h4></a>
+                            <div class="text"><p></p></div>
                         </div>
                     </div>
                 </div>
 
             </article>
-            <article class="col-md-4 col-sm-6 col-xs-12">
-                <div class="default-blog-news">
-                    <figure class="img-holder">
-                        <a href="blog-details.html"><img src="../images/content/33.JPG" alt="News"></a>
-                        <div class="inner-box">
-
-                        </div>
-
-                    </figure>
-                    <div class="lower-content">
-                        <div class="category">Feb 08, 2017</div>
-                        <div class="content">
-                            <a href="blog-details.html"><h4>ประกาศรับสมัคร "เจ้าหน้าที่ธุรการ"</h4></a>
-                            <div class="post-meta">By jacob  |  10 Comments </div>
-                            <div class="text"><p>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p></div>
-                        </div>
-                    </div>
-                </div>
-
-            </article>
-            <article class="col-md-4 col-sm-6 col-xs-12">
-                <div class="default-blog-news">
-                    <figure class="img-holder">
-                        <a href="blog-details.html"><img src="../images/content/33.JPG" alt="News"></a>
-                        <div class="inner-box">
-
-                        </div>
-
-                    </figure>
-                    <div class="lower-content">
-                        <div class="category">Mar 12, 2017</div>
-                        <div class="content">
-                            <a href="blog-details.html"><h4>ประกาศรับสมัคร "เจ้าหน้าที่ธุรการ"</h4></a>
-                            <div class="post-meta">By Alfred  |  10 Comments </div>
-                            <div class="text"><p>Soleat habemus usu, te nec eligendi deserunt vituperata. Natum consulatu vel ea, duo cetero repudiare efficiendi cu.</p></div>
-                        </div>
-                    </div>
-                </div>
-
-            </article>
-
-        </div>
+						<?php
+							}
+							?>
+							</div>
+						<?php
+						}
+						?>
     </div>
 </section>
 

@@ -21,27 +21,23 @@
     <div class="card card-login mx-auto mt-5">
       <div class="card-header">Login</div>
       <div class="card-body">
-        <form>
+        <form action="../function/login.php" method="post">
           <div class="form-group">
-            <label for="exampleInputUser">User Name</label>
-            <input class="form-control" id="exampleInputUser" type="text" placeholder="User Name">
+            <label for="userInput">User Name</label>
+            <input class="form-control" id="userInput" name="userInput" type="text" placeholder="User Name">
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password">
+            <label for="passInput">Password</label>
+            <input class="form-control" id="passInput" name="passInput" type="password" placeholder="Password">
           </div>
           <div class="form-group">
             <div class="form-check">
               <label class="form-check-label">
-                <input class="form-check-input" type="checkbox"> Remember Password</label>
+                <!-- <input class="form-check-input" type="checkbox"> Remember Password</label> -->
             </div>
           </div>
-          <a class="btn btn-primary btn-block" href="slide.php">Login</a>
+          <button class="btn btn-primary btn-block" type="submit" name="Submit" value="Login">Login</button>
         </form>
-        <!-- <div class="text-center">
-          <a class="d-block small mt-3" href="register.html">Register an Account</a>
-          <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
-        </div> -->
       </div>
     </div>
   </div>

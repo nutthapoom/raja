@@ -1,3 +1,12 @@
+<?php
+require_once '../libs/conn.php';
+
+$news_id = $_GET['id'];
+
+$query  = "SELECT * FROM t_cause WHERE cause_id='$news_id'";
+$res = mysqli_query($conn,$query);
+$row  = mysqli_fetch_assoc($res);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=1001">
     <link rel="stylesheet" href="css/responsive.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="../images/fvicons/apple-touch-icon.png">
@@ -53,27 +62,20 @@
             <div class="col-md-8 col-sm-12 col-xs-12">
                 <div class="cause-area urgent-cause2 single-cause cause-list-bg sec-padd">
                     <articel class="item clearfix">
-                        <figure class="img-box">
-                            <img src="../images/content/cause1.jpg" alt="">
-                        </figure>
+                      <figure class="img-holder">
+                          <img src="../images/causes/<?php echo $row["cause_img"]; ?>" alt="News">
+                          <!-- <div class="inner-box">
 
-                        <div class="content">
-                            <div class="donate"><span>Goal: $40000 </span><br> Raised: $24000</div>
-                            <div class="progress-box">
-                                <div class="bar">
-                                    <div class="bar-inner animated-bar" data-percent="55%"><div class="count-text">55%</div></div>
-                                </div>
-                            </div>
-
-                        </div>
+                          </div> -->
+                      </figure>
 
                     </articel><br><br>
 
                     <div class="section-title">
-                        <h2><span class="thm-color">ชีวิตที่ได้ไปต่อ (1)</span></h2>
+                        <h2><span class="thm-color"><?php echo $row["cause_topic"]; ?></span></h2>
                     </div>
                     <div class="text">
-                        <p>&emsp;<b>“ผมรู้สึกเหมือนตายแล้วเกิดใหม่</b> เพราะก่อนได้รับการผ่าตัดเปลี่ยนหัวใจ ตนรู้สึกเหนื่อยมาก อาเจียนทั้งวัน นอนไม่ได้ ต้องนั่งนอน เพราะแน่นหน้าอกทรมานมากๆ หมอบอกว่าเป็นโรคหัวใจโต ต้องใช้เวลารักษาและผ่าตัดรักษา ผมรอการส่งต่อจาก รพ.กบินทร์บุรี เพื่อมาผ่าตัดรพ.ราชวิถี รอคิวอยู่ประมาณ 1ประมาณ 1 อาทิตย์ จึงได้รับการผ่าตัด หลังได้รับการผ่าตัด ทุกอย่างดีขึ้นมาก สามารถทำงานช่วยที่บ้านขายของได้ พูดคุยได้ แม้ว่าจะไม่ดีเหมือนคนปกติ 100 เปอร์เซ็นต์ แต่ก็ดีมากๆ ก่อนหน้าแค่พูดคุยก็เหนื่อยแล้ว ถ้าผมไม่ได้รับการผ่าตัดก็คงไม่มีผมในวันนี้ ต้องขอขอบคุณรพ.ราชวิถี ที่ช่วยให้ชีวิตผมได้ไปต่อครับ ”
+                        <p>&emsp;<b><?php echo $row["cause_detail"]; ?>
                         </p>
                     </div><br><br>
 
@@ -83,14 +85,14 @@
                         <div class="social-box float_left">
                             <span>Share <i class="fa fa-share-alt"></i></span>
                             <ul class="list-inline social">
-                                <li><a href="single-cause.html#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="single-cause.html#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="single-cause.html#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="single-cause.html#"><i class="fa fa-pinterest"></i></a></li>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
                             </ul>
                         </div>
                         <div class="float_right">
-                            <a href="single-cause.html#" class="thm-btn style-2 donate-box-btn">donate us</a>
+                            <a href="medical-donate.php" class="thm-btn style-2 donate-box-btn">บริจาค</a>
                         </div>
                     </div>
 
@@ -103,47 +105,30 @@
             </div>
             <div class="col-md-4 col-sm-12 col-xs-12">
                 <div class="blog-sidebar sec-padd">
-                    <div class="sidebar_search">
-                        <form action="single-cause.html#">
-                            <input type="text" placeholder="Search....">
-                            <button class="tran3s color1_bg"><i class="fa fa-search" aria-hidden="true"></i></button>
-                        </form>
-                    </div>
 
-                    <div class="category-style-one">
-                        <div class="section-title style-2">
-                            <h4>Categories</h4>
-                        </div>
-                        <ul class="list">
-                            <li><a href="single-cause.html#">Childrens Education</a></li>
-                            <li><a href="single-cause.html#">Community Donation</a></li>
-                            <li><a href="single-cause.html#">Poor People Life Saving</a></li>
-                            <li><a href="single-cause.html#">Environmental Saving</a></li>
-                            <li><a href="single-cause.html#">Uncategorized Post</a></li>
-                        </ul>
-                    </div>
 
                     <div class="popular_news">
                         <div class="section-title style-2">
-                            <h4>recent post</h4>
+                            <h4>การรับบริจาคอื่นๆ</h4>
                         </div>
 
                         <div class="popular-post">
+                          <?php
+                            $query_othr  = "SELECT * FROM t_cause WHERE cause_id != '$news_id' ORDER BY cause_id DESC LIMIT 7 ";
+                            $res_othr = mysqli_query($conn,$query_othr);
+                            if(mysqli_num_rows($res_othr) > 0){
+                              while($row_othr = mysqli_fetch_assoc($res_othr))
+                                {
+                              ?>
                             <div class="item">
-                                <div class="post-thumb"><a href="blog-details.html"><img src="../images/blog/thumb3.jpg" alt=""></a></div>
-                                <a href="blog-details.html"><h4>Change the lives of 40 <br> disabled people </h4></a>
-                                <div class="post-info"><i class="fa fa-calendar"></i>October 21, 2016 </div>
+                                <div class="post-thumb"><a href="cause-details.php?id=<?php echo $row_othr['cause_id']; ?>"><img src="../images/causes/<?php echo $row_othr["cause_img"]; ?>" alt=""></a></div>
+                                <a href="blog-details.html"><h4><?php echo $row_othr["cause_topic"]; ?></h4></a>
+                                <div class="post-info"><i class="fa fa-calendar"></i><?php echo $row_othr["date_change"]; ?></div>
                             </div>
-                            <div class="item">
-                                <div class="post-thumb"><a href="blog-details.html"><img src="../images/blog/thumb4.jpg" alt=""></a></div>
-                                <a href="blog-details.html"><h4>Gorantalo earthquake <br> Relief Project </h4></a>
-                                <div class="post-info"><i class="fa fa-calendar"></i>January 14, 2016</div>
-                            </div>
-                            <div class="item">
-                                <div class="post-thumb"><a href="blog-details.html"><img src="../images/blog/thumb5.jpg" alt=""></a></div>
-                                <a href="blog-details.html"><h4>Used equipments can <br> treat poor patients</h4></a>
-                                <div class="post-info"><i class="fa fa-calendar"></i>December 17, 2015 </div>
-                            </div>
+                            <?php
+                                }
+                              }
+                            ?>
                         </div>
                     </div>
 

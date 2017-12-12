@@ -1,5 +1,5 @@
 <?php
-require_once '../libs/conn.php';
+require_once '../function/session.php';
 $de_titile = "คุณต้องการลบข่าวหรือไม่ ?";
 ?>
 <!DOCTYPE html>

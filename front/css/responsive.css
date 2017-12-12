@@ -108,7 +108,7 @@
 	    width: 100%;
 	    height: 2px;
 	    margin: 4px 0;
-	    background: #ff5722;
+	    background: #eb3096;
 	}
 	.defaultmainmenu-menu > li:first-child a {
 	    padding-left: 20px;
@@ -136,12 +136,13 @@
 	}
 	/*======top-bar=========*/
 	.top-bar {
-		padding-bottom: 15px;
+		padding-bottom: 8px;
 	}
 
 	.top-bar-text {
 		float: none;
 		text-align: center;
+		padding-top: 10px;
 	}
 	.top-bar-text p {
 		color: #999;
@@ -154,8 +155,8 @@
 	.top-bar .social li a {
 		color: #999;
 	}
-	#polyglotLanguageSwitcher a.current:link, 
-	#polyglotLanguageSwitcher a.current:visited, 
+	#polyglotLanguageSwitcher a.current:link,
+	#polyglotLanguageSwitcher a.current:visited,
 	#polyglotLanguageSwitcher a.current:active {
 		color: #999;
 		border-color: #999;
@@ -211,6 +212,7 @@
 
 	.main-logo img {
 		width: 150px;
+		text-align: center;
 	}
 }
 
@@ -228,5 +230,3 @@
 		margin-bottom: 0px;
 	}
 }
-
-

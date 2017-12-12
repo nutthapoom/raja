@@ -42,6 +42,9 @@ $row  = mysqli_fetch_assoc($res);
                     <a href="index.php">หน้าหลัก</a>
                 </li>
                 <li>
+                    <a href="./news.php">ข่าวประชาสัมพันธ์</a>
+                </li>
+                <li>
                     รายละเอียดข่าว
                 </li>
             </ul>
@@ -65,7 +68,7 @@ $row  = mysqli_fetch_assoc($res);
                         <div class="lower-content">
                             <div class="share-box clearfix">
                                 <!-- <ul class="tag-box pull-left"> -->
-                                    <div class="category">Mar 12, 2017</div>
+                                    <div class="category"><?php echo $row["date_change"]; ?></div>
                                 <div class="social-box pull-right">
                                 <span>Share <i class="fa fa-share-alt"></i></span>
                                 <ul class="list-inline social">
@@ -77,7 +80,7 @@ $row  = mysqli_fetch_assoc($res);
                                 </div>
                             </div>
                             <div class="col-md-12 content">
-                              <div class="post-meta">By Admin</div>
+                              <!-- <div class="post-meta">By Admin</div> -->
                               <h4><?php echo $row["news_topic"]; ?></h4></a>
                               <div class="text">
                                 <p>&emsp;&emsp;<?php echo $row["news_detail"]; ?></p>
@@ -121,21 +124,22 @@ $row  = mysqli_fetch_assoc($res);
                         </div>
 
                         <div class="popular-post">
+                          <?php
+                            $query_othr  = "SELECT * FROM t_news WHERE news_id != '$news_id' ORDER BY news_id DESC LIMIT 7 ";
+                            $res_othr = mysqli_query($conn,$query_othr);
+                            if(mysqli_num_rows($res_othr) > 0){
+                              while($row_othr = mysqli_fetch_assoc($res_othr))
+                                {
+                              ?>
                             <div class="item">
-                                <div class="post-thumb"><a href="#"><img src="../images/blog/thumb3.jpg" alt=""></a></div>
-                                <a href="#"><h4>New Award To Support <br>Children Affected by Crises</h4></a>
-                                <div class="post-info">October 21, 2016</div>
+                                <div class="post-thumb"><a href="news-details.php?id=<?php echo $row_othr['news_id']; ?>"><img src="../images/news/<?php echo $row_othr["news_img"]; ?>" alt=""></a></div>
+                                <a href="news-details.php?id=<?php echo $row_othr['news_id']; ?>"><h4><?php echo $row_othr["news_topic"]; ?></h4></a>
+                                <div class="post-info"><?php echo $row_othr["date_change"]; ?></div>
                             </div>
-                            <div class="item">
-                                <div class="post-thumb"><a href="#"><img src="../images/blog/thumb4.jpg" alt=""></a></div>
-                                <a href="#"><h4>Help promote girl's Education <br>in the world</h4></a>
-                                <div class="post-info">January 14, 2016</div>
-                            </div>
-                            <div class="item">
-                                <div class="post-thumb"><a href="#"><img src="../images/blog/thumb5.jpg" alt=""></a></div>
-                                <a href="#"><h4>Clean poor urban areas to <br>protect from pollution.</h4></a>
-                                <div class="post-info">December 17, 2015</div>
-                            </div>
+                            <?php
+                                }
+                              }
+                            ?>
                         </div>
                     </div>
                 </div>

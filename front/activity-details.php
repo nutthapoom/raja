@@ -1,3 +1,11 @@
+<?php
+require_once '../libs/conn.php';
+$news_id = $_GET['id'];
+
+$query  = "SELECT * FROM t_activ WHERE act_id='$news_id'";
+$res = mysqli_query($conn,$query);
+$row  = mysqli_fetch_assoc($res);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,9 +20,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="../images/favicons/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="../images/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/fvicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../images/favicons/fvicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../images/favicons/fvicon-16x16.png" sizes="16x16">
 
 
 
@@ -30,10 +38,10 @@
         <div class="pull-left">
             <ul class="list-inline link-list">
                 <li>
-                    <a href="index.html">หน้าหลัก</a>
+                    <a href="index.php">หน้าหลัก</a>
                 </li>
                 <li>
-                    Blog Details
+                    กิจกรรม
                 </li>
             </ul>
         </div>
@@ -45,104 +53,91 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-sm-12">
-                <div class="post-area sec-padd">
+                <div class="post-area sec-form">
                     <article class="classic-blog-news">
                         <figure class="img-holder">
-                            <a href="blog-details.html"><img src="../images/blog/l2.jpg" alt="News"></a>
-                            <div class="inner-box">
+                            <img src="../images/activ/<?php echo $row["act_img"]; ?>" alt="News">
+                            <!-- <div class="inner-box">
 
-                            </div>
-
+                            </div> -->
                         </figure>
                         <div class="lower-content">
-                            <div class="category">Mar 12, 2017</div>
-                            <div class="content">
-                                <div class="post-meta">By jacob  |  10 Comments</div>
-                                <a href="blog-details.html"><h4>onation food for childrens</h4></a>
-                                <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                <div class="text">
-                                    <p>Nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                    <p>Audiam virtute ut, case utamur fuisset eam ut, iisque accommodare an eam. Reque blandit qui eu, cu vix nonumy volumus. Legendos intellegam id usu, vide oporteat vix eu, id illud principes has. Nam tempor utamur gubergren no. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                </div>
-                                <div class="author">
-                                    <!-- Image -->
-                                    <img src="../images/blog/author.jpg" alt="">
-                                    <div class="author-comment">
-                                        <div class="quote">
-                                            <i class="fa fa-quote-left"></i>
-                                        </div>
-                                        <p>Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                        <h5>brendan Taylor</h5>
-                                        <p class="a-title">Manager</p>
-                                    </div>
-                                </div>
-                                <div class="text">
-                                    <p>Know how to pursue pleasure rationally encounter consequences that are extremely painful seds or again is there anyone who loves or pursues or desires to obtain pain of itself, because seds our it pain, but because occasionally circumstances occur which toil and pain can  undertakes laborious physical exercise.</p>
-                                </div>
-                                <div class="share-box clearfix">
-                                    <ul class="tag-box pull-left">
-                                        <li>Category: </li>
-                                        <li><a href="blog-details.html#">Donation,</a></li>
-                                        <li><a href="blog-details.html#">Childrens,</a></li>
-                                        <li><a href="blog-details.html#">Education,</a></li>
+                            <div class="share-box clearfix">
+                                <!-- <ul class="tag-box pull-left"> -->
+                                    <div class="category"><?php echo $row["date_change"]; ?></div>
+                                <div class="social-box pull-right">
+                                <span>Share <i class="fa fa-share-alt"></i></span>
+                                <ul class="list-inline social">
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
                                     </ul>
-                                    <div class="social-box pull-right">
-                                    <span>Share <i class="fa fa-share-alt"></i></span>
-                                    <ul class="list-inline social">
-                                            <li><a href="blog-details.html#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="blog-details.html#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="blog-details.html#"><i class="fa fa-google-plus"></i></a></li>
-                                            <li><a href="blog-details.html#"><i class="fa fa-pinterest"></i></a></li>
-                                        </ul>
-                                    </div>
                                 </div>
+                            </div>
+                            <div class="col-md-12 content">
+                              <!-- <div class="post-meta">By Admin</div> -->
+                              <h4><?php echo $row["act_topic"]; ?></h4></a>
+                              <div class="text">
+                                <p>&emsp;&emsp;<?php echo $row["act_detail"]; ?></p>
+                              </div>
+                              <p>&emsp;</p>
+                              <?php
+                                $query_img  = "SELECT * FROM t_activ_img WHERE act_id = '$news_id'";
+                                $res_img = mysqli_query($conn,$query_img);
+                                if(mysqli_num_rows($res_img) > 0){
+                                ?>
+                              <div class="section-title">
+                                <h5>&emsp;&emsp;<span class="thm-color">รูปภาพประกอบ</span></h5>
+                              </div>
+                              <section class="gallery .no-padd style-2">
+                                <?php
+                                while($row_img = mysqli_fetch_assoc($res_img))
+                                  {
+                                ?>
+                                <article class="col-md-4 col-sm-6 col-xs-12 filter-item Children">
+                                  <div class="item">
+                                    <img src="../images/activ/img/<?php echo $row_img["aimg_img"]; ?>" alt="">
+                                      </div>
+                                </article>
+                                <?php
+                                  }
+                                ?>
+                              </section>
+                          <?php
+                            }
+                            ?>
                             </div>
                         </div>
                     </article>
                 </div>
-
             </div>
             <div class="col-md-4 col-sm-12">
-                <div class="blog-sidebar sec-padd">
-                    <div class="category-style-one">
-                        <div class="section-title style-2">
-                            <h4>กิจกรรมอื่นๆ</h4>
-                        </div>
-                        <ul class="list">
-                            <li><a href="blog-details.html#">About Donation <span>(8)</span></a></li>
-                            <li><a href="blog-details.html#">Become a Volunteer <span>(5)</span></a></li>
-                            <li><a href="blog-details.html#">How Can You Help? <span>(3)</span></a></li>
-                            <li><a href="blog-details.html#">Customer Insights<span>(10)</span></a></li>
-                            <li><a href="blog-details.html#">Safety &amp; Privacy  <span>(4)</span></a></li>
-                        </ul>
-                    </div>
-
+                <div class="blog-sidebar sec-form20">
                     <div class="popular_news">
                         <div class="section-title style-2">
                             <h4>กิจกรรมอื่นที่น่าสนใจ</h4>
                         </div>
 
                         <div class="popular-post">
+                          <?php
+                            $query_othr  = "SELECT * FROM t_activ WHERE act_id != '$news_id' ORDER BY act_id DESC LIMIT 7 ";
+                            $res_othr = mysqli_query($conn,$query_othr);
+                            if(mysqli_num_rows($res_othr) > 0){
+                              while($row_othr = mysqli_fetch_assoc($res_othr))
+                                {
+                              ?>
                             <div class="item">
-                                <div class="post-thumb"><a href="blog-details.html"><img src="../images/blog/thumb3.jpg" alt=""></a></div>
-                                <a href="blog-details.html"><h4>New Award To Support <br>Children Affected by Crises</h4></a>
-                                <div class="post-info">October 21, 2016</div>
+                                <div class="post-thumb"><a href="activity-details.php?id=<?php echo $row_othr['act_id']; ?>"><img src="../images/activ/<?php echo $row_othr["act_img"]; ?>" alt=""></a></div>
+                                <a href="activity-details.php?id=<?php echo $row_othr['act_id']; ?>"><h4><?php echo $row_othr["act_topic"]; ?></h4></a>
+                                <div class="post-info"><?php echo $row_othr["date_change"]; ?></div>
                             </div>
-                            <div class="item">
-                                <div class="post-thumb"><a href="blog-details.html"><img src="../images/blog/thumb4.jpg" alt=""></a></div>
-                                <a href="blog-details.html"><h4>Help promote girl's Education <br>in the world</h4></a>
-                                <div class="post-info">January 14, 2016</div>
-                            </div>
-                            <div class="item">
-                                <div class="post-thumb"><a href="blog-details.html"><img src="../images/blog/thumb5.jpg" alt=""></a></div>
-                                <a href="blog-details.html"><h4>Clean poor urban areas to <br>protect from pollution.</h4></a>
-                                <div class="post-info">December 17, 2015</div>
-                            </div>
+                            <?php
+                                }
+                              }
+                            ?>
                         </div>
                     </div>
-
-
-
                 </div>
             </div>
 

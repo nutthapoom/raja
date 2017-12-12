@@ -1,5 +1,5 @@
 <?php
-require_once '../libs/conn.php';
+require_once './session.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,8 +69,3 @@ require_once '../libs/conn.php';
 
   mysqli_close($conn);
 ?>
-<script language="javascript">
-function goBack() {
-    window.location.href = "../manage/album.php"
-}
-</script>

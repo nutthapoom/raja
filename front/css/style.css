@@ -128,7 +128,7 @@ input,textarea {font-family: 'Roboto', sans-serif;display: block; font-size: 16p
 }
 
 .sec-padd2 {
-  padding: 80px 0 30px;
+  padding: 60px 0 30px;
 }
 .sec-padd3 {
   padding: 80px 0 50px;
@@ -1202,6 +1202,14 @@ input,textarea {font-family: 'Roboto', sans-serif;display: block; font-size: 16p
   max-width:100%;
 }
 
+.defaultmainmenu-menu .pull-left .logo-outer .logo img{
+  /*position:relative;
+  display:inline-block;
+  max-width:100%;*/
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .main-header .header-upper .upper-right{
   position:relative;
   padding:10px 0px;
@@ -1353,7 +1361,7 @@ input,textarea {font-family: 'Roboto', sans-serif;display: block; font-size: 16p
 
 .defaultmainmenu-menu > li > a {
   position: relative;
-  padding: 24px 22px;
+  padding: 30px 20px;
   text-transform: uppercase;
   color: #fff;
   font-weight: 700;
@@ -1681,7 +1689,7 @@ input,textarea {font-family: 'Roboto', sans-serif;display: block; font-size: 16p
 .rev_slider_wrapper a.thm-btn.style-3,
 .rev_slider_wrapper a.thm-btn {
   transition: all 500ms ease !important;
-  padding: 13px 38px;
+  padding: 0px 40px;
 }
 
 
@@ -1770,6 +1778,8 @@ input,textarea {font-family: 'Roboto', sans-serif;display: block; font-size: 16p
   position: relative;
   overflow: hidden;
   display: inline-block;
+  height: 207px;
+  width: auto;
 }
 .urgent-cause2 .img-box .overlay {
   position: absolute;
@@ -1808,7 +1818,8 @@ input,textarea {font-family: 'Roboto', sans-serif;display: block; font-size: 16p
   padding-bottom: 30px;
   background: #fff;
   border: 1px solid #f4f4f4;
-  border-top: 0px;
+  border-top: 1px solid #f4f4f4;
+  height: 100px;
 }
 .urgent-cause2 .content h4 {
   margin-bottom: 15px;
@@ -2623,6 +2634,10 @@ input,textarea {font-family: 'Roboto', sans-serif;display: block; font-size: 16p
   background: #f9f9f9;
 }
 
+.gallery.with-bg {
+  background: #f9f9f9;
+}
+
 .about .img-box {
   margin-bottom: 20px;
 }
@@ -2804,6 +2819,12 @@ input,textarea {font-family: 'Roboto', sans-serif;display: block; font-size: 16p
 
 .gallery .item img {
   width: 100%;
+  /*height: 155px;*/
+}
+
+.gallerys .item img {
+  width: 100%;
+  height: 155px;
 }
 
 .gallery .overlay .top {
@@ -3629,6 +3650,7 @@ input,textarea {font-family: 'Roboto', sans-serif;display: block; font-size: 16p
 .default-blog-news .lower-content .content {
   background: #fff;
   padding: 15px 20px 25px;
+  height: 125px;
 }
 
 .default-blog-news .lower-content .category {
@@ -3650,7 +3672,7 @@ input,textarea {font-family: 'Roboto', sans-serif;display: block; font-size: 16p
 .default-blog-news .lower-content h4 {
   color:#303030;
   font-weight: 700;
-  margin-bottom: 24px;
+  /*margin-bottom: 10px;*/
   font-size: 20px;
   line-height: 28px;
 }
@@ -3681,12 +3703,15 @@ input,textarea {font-family: 'Roboto', sans-serif;display: block; font-size: 16p
     position: relative;
 }
 .default-blog-news .img-holder a {
-  width: 100%;
+  width: auto;
+  height: 214px;
 }
 .default-blog-news .img-holder img {
     transform: scale(1);
     transition: all 0.5s ease 0s;
     width: 100%;
+    height: inherit;
+    width: -webkit-fill-available;
 }
 
 .default-blog-news:hover .img-holder img {
@@ -4005,6 +4030,7 @@ input,textarea {font-family: 'Roboto', sans-serif;display: block; font-size: 16p
 .blog-sidebar .popular-post .item .post-thumb img{
     width:100%;
     display:block;
+    height: 56px;
 }
 
 
@@ -4491,7 +4517,7 @@ input,textarea {font-family: 'Roboto', sans-serif;display: block; font-size: 16p
 .main-footer {
   position:relative;
   background: #2b2b2b;
-  padding: 25px 0 80px;
+  padding: 0px 0 20px;
 }
 
 .main-footer .about-column .default_link {
@@ -4511,16 +4537,16 @@ input,textarea {font-family: 'Roboto', sans-serif;display: block; font-size: 16p
 
 
 .main-footer .footer-widget {
-  margin-top: 50px;
+  margin-top: 25px;
 }
 
 .main-footer .section-title {
-  margin-bottom: 40px;
+  margin-bottom: 8px;
 }
 .main-footer .section-title:before {
   display: none;
 }
-.main-footer .section-title h4 {
+.main-footer .section-title p {
   color: #fff;
   font-size: 18px;
   text-transform: uppercase;
@@ -8126,4 +8152,19 @@ td.medical {
 
 .jumbotron .container{
   font-size: 18px;
+}
+
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+/*h2 {
+    font-size: 16px;
+}*/
+
+@media only screen and (max-width: 500px) {
+    h2 {
+        font-size: 39px;
+    }
 }

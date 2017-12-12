@@ -1,5 +1,5 @@
 <?php
-require_once '../libs/conn.php';
+require_once '../function/session.php';
 $s_id = $_GET['id'];
 $query  = "SELECT * FROM t_slide WHERE slide_id='$s_id'";
 $res = mysqli_query($conn,$query);
@@ -48,16 +48,10 @@ $row  = mysqli_fetch_assoc($res);
                 </div>
               </div>
               <div class="form-group row">
-                <label for="inputDetails" class="col-sm-2 col-form-label">รายละเอียด</label>
-                <div class="col-sm-10">
-                  <textarea class="form-control" id="inputDetails" name="inputDetail" rows="2"><?php echo $row['slide_detail']; ?></textarea>
-                </div>
-              </div>
-              <div class="form-group row">
                 <div class="col-sm-2">Image</div>
                 <div class="col-sm-10">
                   <div class="form-group">
-                    <span><?php if ($row['slide_img'] != ""){?><img src="../images/slide/<?php echo $row['slide_img']; ?>" width="auto" height="200"><?php }else {
+                    <span><?php if ($row['slide_img'] != ""){?><img src="../images/slider/<?php echo $row['slide_img']; ?>" width="auto" height="200"><?php }else {
                    ?><div class="alert alert-danger"><strong>ไม่มีรูปภาพ !</strong></div><?php } ?>
                     </span>
                     <br /><br />
@@ -82,7 +76,7 @@ $row  = mysqli_fetch_assoc($res);
     <footer class="sticky-footer">
       <div class="container">
         <div class="text-center">
-          <small>Copyright © Your Website 2017</small>
+          <small>Copyright © Rajavithihospitalfoundation 2017</small>
         </div>
       </div>
     </footer>

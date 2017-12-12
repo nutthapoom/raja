@@ -7,7 +7,7 @@
   </body>
 </html>
 <?php
-  require_once '../libs/conn.php';
+  require_once './session.php';
   date_default_timezone_set("Asia/Bangkok");
   $m_fname = 	$_POST['inputName'];
   $m_lname = $_POST['inputLastName'];

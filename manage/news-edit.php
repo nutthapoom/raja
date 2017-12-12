@@ -1,5 +1,5 @@
 <?php
-require_once '../libs/conn.php';
+require_once '../function/session.php';
 $n_id = $_GET['id'];
 
 $query  = "SELECT a.*, b.* FROM t_news AS a LEFT JOIN t_news_type AS b ON a.ntype_id = b.ntype_id WHERE news_id='$n_id'";
@@ -103,7 +103,7 @@ $row  = mysqli_fetch_assoc($res);
     <footer class="sticky-footer">
       <div class="container">
         <div class="text-center">
-          <small>Copyright © Your Website 2017</small>
+          <small>Copyright © Rajavithihospitalfoundation 2017</small>
         </div>
       </div>
     </footer>

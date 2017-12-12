@@ -1,8 +1,8 @@
 <?php
 session_start();
 require_once '../libs/conn.php';
-  $user = $_POST['username'];
-	$pass = hash('sha256', $_POST['password']);
+  $user = $_POST['userInput'];
+	$pass = hash('sha256', $_POST['passInput']);
 
   if($user == ''){
     echo "Check Username";
@@ -18,17 +18,14 @@ require_once '../libs/conn.php';
 			include_once'../script/error_login.php';
     }else{
 			//*** Session
-			$_SESSION['mmem_id'] = $row['mem_id'];
-			$_SESSION['mem_user'] = $row['mem_user'];
+			$_SESSION['mem_id'] = $row['mem_id'];
 			session_write_close();
 ?>
         <script language="javascript">
-            window.location.href = "../manage/index.html"
+            window.location.href = "../manage/slide.php"
         </script>
 <?php
 		}
   }
-
-}
 	mysqli_close($conn);
 ?>

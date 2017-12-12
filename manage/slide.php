@@ -1,5 +1,5 @@
 <?php
-require_once '../libs/conn.php';
+require_once '../function/session.php';
 $de_titile = "คุณต้องการลบรูปภาพหรือไม่ ?";
 ?>
 <!DOCTYPE html>
@@ -39,7 +39,6 @@ $de_titile = "คุณต้องการลบรูปภาพหรือ
               <thead>
                 <tr>
                   <th class="text-center">Name</th>
-                  <th class="text-center">Details</th>
                   <th class="text-center">Image</th>
                   <th class="text-center" width="140px">Status</th>
                   <th class="text-center" width="140px">Manage</th>
@@ -54,8 +53,7 @@ $de_titile = "คุณต้องการลบรูปภาพหรือ
                 ?>
                 <tr>
                   <td><?php echo $row["slide_title"]; ?></td>
-                  <td><?php echo $row["slide_detail"]; ?></td>
-                  <td class="text-center"><img src="../images/slide/<?php echo $row['slide_img']; ?>" width="auto" height="50px"></td>
+                  <td class="text-center"><img src="../images/slider/<?php echo $row['slide_img']; ?>" width="auto" height="50px"></td>
                   <td class="text-center">
                     <?php if ($row['slide_hot'] == "1"){?>
                       <a href="../function/change-status0.php?id=<?= $row["slide_id"]; ?>" class="btn btn-success btn-sm"><i class="fa fa-refresh" aria-hidden="true"></i> แสดง</a>
@@ -129,12 +127,12 @@ $de_titile = "คุณต้องการลบรูปภาพหรือ
                 <input type="text" class="form-control" id="inputName" name="inputName" placeholder="Input Name">
               </div>
             </div>
-            <div class="form-group row">
+            <!-- <div class="form-group row">
               <label for="inputDetails" class="col-sm-2 col-form-label">รายละเอียด</label>
               <div class="col-sm-10">
                 <textarea class="form-control" id="inputDetails" name="inputDetail" rows="2"></textarea>
               </div>
-            </div>
+            </div> -->
             <div class="form-group row">
               <div class="col-sm-2">ไฟล์รูปภาพ</div>
               <div class="col-sm-10">

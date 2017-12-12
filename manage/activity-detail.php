@@ -1,5 +1,5 @@
 <?php
-require_once '../libs/conn.php';
+require_once '../function/session.php';
 $n_id = $_GET['id'];
 $de_titile = "คุณต้องการลบรูปภาพประกอบหรือไม่ ?";
 ?>

@@ -1,3 +1,6 @@
+<?php
+require_once '../libs/conn.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,9 +15,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="../images/favicons/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="../images/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/fvicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../images/fvicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../images/fvicons/favicon-16x16.png" sizes="16x16">
 
 
 
@@ -52,186 +55,41 @@
     </div>
 </div>
 
-
-
-
 <section class="all-blog blog-section sec-padd2">
     <div class="container">
+      <div class="container">
+          <div class="row">
+            <?php
+            $query_img  = "SELECT * FROM t_news WHERE ntype_id = '1' ORDER BY news_id DESC";
+            $res_img = mysqli_query($conn,$query_img);
+            if(mysqli_num_rows($res_img) > 0){
+              while($row_img = mysqli_fetch_assoc($res_img))
+              {
+            ?>
+              <article class="col-md-4 col-sm-6 col-xs-12">
+                  <div class="default-blog-news">
+                      <figure class="img-holder">
+                          <a href="news-details.php?id=<?php echo $row_img['news_id']; ?>"><img src="../images/news/<?php echo $row_img['news_img']; ?>" alt="News"></a>
+                          <div class="inner-box">
 
-        <div class="row">
-            <article class="col-md-4 col-sm-6 col-xs-12">
-                <div class="default-blog-news">
-                    <figure class="img-holder">
-                        <a href="news-raja-details.php"><img src="../images/blog/1.jpg" alt="News"></a>
-                        <div class="inner-box">
+                          </div>
 
-                        </div>
-
-                    </figure>
-                    <div class="lower-content">
-                        <div class="category">Jan 05, 2017</div>
-                        <div class="content">
-                            <a href="news-raja-details.php"><h4>Education For All Campaign</h4></a>
-                            <div class="text"><p>Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p></div>
-                        </div>
-                    </div>
-                </div>
-
-            </article>
-            <article class="col-md-4 col-sm-6 col-xs-12">
-                <div class="default-blog-news">
-                    <figure class="img-holder">
-                        <a href="news-raja-details.php"><img src="../images/blog/2.jpg" alt="News"></a>
-                        <div class="inner-box">
-
-                        </div>
-
-                    </figure>
-                    <div class="lower-content">
-                        <div class="category">Feb 08, 2017</div>
-                        <div class="content">
-                            <a href="news-raja-details.php"><h4>Donation food for childrens</h4></a>
-                            <div class="text"><p>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p></div>
-                        </div>
-                    </div>
-                </div>
-
-            </article>
-            <article class="col-md-4 col-sm-6 col-xs-12">
-                <div class="default-blog-news">
-                    <figure class="img-holder">
-                        <a href="news-raja-details.php"><img src="../images/blog/3.jpg" alt="News"></a>
-                        <div class="inner-box">
-
-                        </div>
-
-                    </figure>
-                    <div class="lower-content">
-                        <div class="category">Mar 12, 2017</div>
-                        <div class="content">
-                            <a href="news-raja-details.php"><h4>Helping Kids Grow Up Stronger</h4></a>
-                            <div class="text"><p>Soleat habemus usu, te nec eligendi deserunt vituperata. Natum consulatu vel ea, duo cetero repudiare efficiendi cu.</p></div>
-                        </div>
-                    </div>
-                </div>
-
-            </article>
-            <article class="col-md-4 col-sm-6 col-xs-12">
-                <div class="default-blog-news">
-                    <figure class="img-holder">
-                        <a href="news-raja-details.php"><img src="../images/blog/1.jpg" alt="News"></a>
-                        <div class="inner-box">
-
-                        </div>
-
-                    </figure>
-                    <div class="lower-content">
-                        <div class="category">Jan 05, 2017</div>
-                        <div class="content">
-                            <a href="news-raja-details.php"><h4>Education For All Campaign</h4></a>
-                            <div class="text"><p>Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p></div>
-                        </div>
-                    </div>
-                </div>
-
-            </article>
-            <article class="col-md-4 col-sm-6 col-xs-12">
-                <div class="default-blog-news">
-                    <figure class="img-holder">
-                        <a href="news-raja-details.php"><img src="../images/blog/2.jpg" alt="News"></a>
-                        <div class="inner-box">
-
-                        </div>
-
-                    </figure>
-                    <div class="lower-content">
-                        <div class="category">Feb 08, 2017</div>
-                        <div class="content">
-                            <a href="news-raja-details.php"><h4>Donation food for childrens</h4></a>
-                            <div class="text"><p>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p></div>
-                        </div>
-                    </div>
-                </div>
-
-            </article>
-            <article class="col-md-4 col-sm-6 col-xs-12">
-                <div class="default-blog-news">
-                    <figure class="img-holder">
-                        <a href="news-raja-details.php"><img src="../images/blog/3.jpg" alt="News"></a>
-                        <div class="inner-box">
-
-                        </div>
-
-                    </figure>
-                    <div class="lower-content">
-                        <div class="category">Mar 12, 2017</div>
-                        <div class="content">
-                            <a href="news-raja-details.php"><h4>Helping Kids Grow Up Stronger</h4></a>
-                            <div class="text"><p>Soleat habemus usu, te nec eligendi deserunt vituperata. Natum consulatu vel ea, duo cetero repudiare efficiendi cu.</p></div>
-                        </div>
-                    </div>
-                </div>
-
-            </article>
-            <article class="col-md-4 col-sm-6 col-xs-12">
-                <div class="default-blog-news">
-                    <figure class="img-holder">
-                        <a href="news-raja-details.php"><img src="../images/blog/1.jpg" alt="News"></a>
-                        <div class="inner-box">
-
-                        </div>
-
-                    </figure>
-                    <div class="lower-content">
-                        <div class="category">Jan 05, 2017</div>
-                        <div class="content">
-                            <a href="news-raja-details.php"><h4>Education For All Campaign</h4></a>
-                            <div class="text"><p>Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p></div>
-                        </div>
-                    </div>
-                </div>
-
-            </article>
-            <article class="col-md-4 col-sm-6 col-xs-12">
-                <div class="default-blog-news">
-                    <figure class="img-holder">
-                        <a href="news-raja-details.php"><img src="../images/blog/2.jpg" alt="News"></a>
-                        <div class="inner-box">
-
-                        </div>
-
-                    </figure>
-                    <div class="lower-content">
-                        <div class="category">Feb 08, 2017</div>
-                        <div class="content">
-                            <a href="news-raja-details.php"><h4>Donation food for childrens</h4></a>
-                            <div class="text"><p>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p></div>
-                        </div>
-                    </div>
-                </div>
-
-            </article>
-            <article class="col-md-4 col-sm-6 col-xs-12">
-                <div class="default-blog-news">
-                    <figure class="img-holder">
-                        <a href="news-raja-details.php"><img src="../images/blog/3.jpg" alt="News"></a>
-                        <div class="inner-box">
-
-                        </div>
-
-                    </figure>
-                    <div class="lower-content">
-                        <div class="category">Mar 12, 2017</div>
-                        <div class="content">
-                            <a href="news-raja-details.php"><h4>Helping Kids Grow Up Stronger</h4></a>
-                            <div class="text"><p>Soleat habemus usu, te nec eligendi deserunt vituperata. Natum consulatu vel ea, duo cetero repudiare efficiendi cu.</p></div>
-                        </div>
-                    </div>
-                </div>
-
-            </article>
-
-        </div>
+                      </figure>
+                      <div class="lower-content">
+                          <div class="category"><?php echo $row_img['date_change']; ?></div>
+                          <div class="content">
+                              <a href="news-details.php?id=<?php echo $row_img['news_id']; ?>"><h4><?php echo $row_img['news_topic']; ?></h4></a>
+                              <div class="text"><p><?php echo $row_img['news_topic']; ?></p></div>
+                          </div>
+                      </div>
+                  </div>
+              </article>
+              <?php
+                }
+              }
+              ?>
+          </div>
+      </div>
     </div>
 </section>
 

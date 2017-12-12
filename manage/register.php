@@ -1,5 +1,5 @@
 <?php
-require_once '../libs/conn.php';
+require_once '../function/session.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">

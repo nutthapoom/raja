@@ -1,3 +1,6 @@
+<?php
+require_once '../libs/conn.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,9 +15,9 @@
     <link rel="stylesheet" href="css/style.css?v=1001">
     <link rel="stylesheet" href="css/responsive.css">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="../images/favicons/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="../images/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/fvicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="../images/fvicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../images/fvicons/favicon-16x16.png" sizes="16x16">
 
 
 
@@ -33,7 +36,7 @@
 <div class="inner-banner has-base-color-overlay text-center" style="background: url(../images/background/5.jpg);">
     <div class="container">
         <div class="box">
-            <h1>กิจกรรมการรับบริจาคทั้งในและนอกสถานที่</h1>
+            <h1>กิจกรรม</h1>
         </div>
     </div>
 </div>
@@ -60,111 +63,34 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="event-left-column sec-padd">
-                    <div class="row">
-                        <article class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="item clearfix">
-                                <figure class="img-holder">
-                                    <a href="activity-details.php"><img src="../images/event/1.jpg" alt=""></a>
-                                    <div class="overlay2">
-                                        <a href="activity-details.php" class="thm-btn">read more</a>
-                                    </div>
-                                </figure>
-                                <div class="lower-content">
-                                    <div class="date">21 <br><span>Mar 2017</span></div>
-                                    <a href="activity-details.php"><h3>Run for Cancer People</h3></a>
-                                    <div class="post-meta"><i class="fa fa-clock-o"></i>Started On: 09.30pm <br><i class="fa fa-map-marker"></i> New Grand Street, California</div>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="item clearfix">
-                                <figure class="img-holder">
-                                    <a href="activity-details.php"><img src="../images/event/2.jpg" alt=""></a>
-                                    <div class="overlay2">
-                                        <a href="activity-details.php" class="thm-btn">read more</a>
-                                    </div>
-                                </figure>
-                                <div class="lower-content">
-                                    <div class="date">14 <br><span>Apr 2017</span></div>
-                                    <a href="activity-details.php"><h3>Providing Water for Farmers</h3></a>
-                                    <div class="post-meta"><i class="fa fa-clock-o"></i>Started On: 09.30pm</div>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="item clearfix">
-                                <figure class="img-holder">
-                                    <a href="activity-details.php"><img src="../images/event/3.jpg" alt=""></a>
-                                    <div class="overlay2">
-                                        <a href="activity-details.php" class="thm-btn">read more</a>
-                                    </div>
-                                </figure>
-                                <div class="lower-content">
-                                    <div class="date">18 <br><span>May 2017</span></div>
-                                    <a href="activity-details.php"><h3>Donation trailwalker</h3></a>
-                                    <div class="post-meta"><i class="fa fa-clock-o"></i>Started On: 09.30pm <br><i class="fa fa-map-marker"></i> New Grand Street, California</div>
-                                </div>
-                            </div>
-                        </article>
+                  <?php
+                  $query_img  = "SELECT * FROM t_activ WHERE act_id = '1' ORDER BY act_id DESC";
+                  $res_img = mysqli_query($conn,$query_img);
+                  if(mysqli_num_rows($res_img) > 0){
+                    while($row_img = mysqli_fetch_assoc($res_img))
+                    {
+                  ?>
+                    <article class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="default-blog-news">
+                            <figure class="img-holder">
+                                <a href="activity-details.php?id=<?php echo $row_img['act_id']; ?>"><img src="../images/activ/<?php echo $row_img['act_img']; ?>" alt="News"></a>
+                                <div class="inner-box">
 
+                                </div>
 
-                    </div>
-                    <div class="row">
-                        <article class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="item clearfix">
-                                <figure class="img-holder">
-                                    <a href="activity-details.php"><img src="../images/event/5.jpg" alt=""></a>
-                                    <div class="overlay2">
-                                        <a href="activity-details.php" class="thm-btn">read more</a>
-                                    </div>
-                                </figure>
-                                <div class="lower-content">
-                                    <div class="date">21 <br><span>Aug 2017</span></div>
-                                    <a href="activity-details.php"><h3>Run for Cancer People</h3></a>
-                                    <div class="post-meta"><i class="fa fa-clock-o"></i>Started On: 09.30pm <br><i class="fa fa-map-marker"></i>Tottenham Court Road, London</div>
+                            </figure>
+                            <div class="lower-content">
+                                <div class="category"><?php echo $row_img['date_change']; ?></div>
+                                <div class="content">
+                                    <a href="activity-details.php?id=<?php echo $row_img['act_id']; ?>"><h4><?php echo $row_img['act_topic']; ?></h4></a>
                                 </div>
                             </div>
-                        </article>
-                        <article class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="item clearfix">
-                                <figure class="img-holder">
-                                    <a href="activity-details.php"><img src="../images/event/6.jpg" alt=""></a>
-                                    <div class="overlay2">
-                                        <a href="activity-details.php" class="thm-btn">read more</a>
-                                    </div>
-                                </figure>
-                                <div class="lower-content">
-                                    <div class="date">14 <br><span>Apr 2017</span></div>
-                                    <a href="activity-details.php"><h3>Providing Water for Farmers</h3></a>
-                                    <div class="post-meta"><i class="fa fa-clock-o"></i>Started On: 09.30pm <br><i class="fa fa-map-marker"></i> New Grand Street, California</div>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="item clearfix">
-                                <figure class="img-holder">
-                                    <a href="activity-details.php"><img src="../images/event/7.jpg" alt=""></a>
-                                    <div class="overlay2">
-                                        <a href="activity-details.php" class="thm-btn">read more</a>
-                                    </div>
-                                </figure>
-                                <div class="lower-content">
-                                    <div class="date">18 <br><span>May 2017</span></div>
-                                    <a href="activity-details.php"><h3>Donation trailwalker</h3></a>
-                                    <div class="post-meta"><i class="fa fa-clock-o"></i>Started On: 09.30pm <br><i class="fa fa-map-marker"></i> Tottenham Court Road, London</div>
-                                </div>
-                            </div>
-                        </article>
-
-
-                    </div>
-
-                    <ul class="page_pagination center">
-                        <li><a href="event-1.html#" class="tran3s"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
-                        <li><a href="event-1.html#" class="active tran3s">1</a></li>
-                        <li><a href="event-1.html#" class="tran3s">2</a></li>
-                        <li><a href="event-1.html#" class="tran3s"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-                    </ul>
+                        </div>
+                    </article>
+                    <?php
+                      }
+                    }
+                    ?>
                 </div>
 
 

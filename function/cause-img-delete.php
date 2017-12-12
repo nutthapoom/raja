@@ -1,5 +1,5 @@
 <?php
-require_once '../libs/conn.php';
+require_once './session.php';
 if(isset($_POST["id"]))
 {
  foreach($_POST["id"] as $id)

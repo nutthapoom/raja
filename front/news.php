@@ -46,7 +46,8 @@ require_once '../libs/conn.php';
           </div>
       </div>
   </div>
-  <section class="all-blog blog-section sec-padd2">
+
+  <section class="blog-section sec-padd2">
       <div class="container">
           <div class="row">
             <?php
@@ -59,24 +60,25 @@ require_once '../libs/conn.php';
               <article class="col-md-4 col-sm-6 col-xs-12">
                   <div class="default-blog-news">
                       <figure class="img-holder">
-                        <a href="news-details.php?id=<?php echo $row_img['news_id']; ?>"><img src="../images/news/<?php echo $row_img['news_img']; ?>" alt="News"></a>
-                        <div class="inner-box">
-                        </div>
+                          <a href="news-details.php?id=<?php echo $row_img['news_id']; ?>"><img src="../images/news/<?php echo $row_img['news_img']; ?>" alt="News"></a>
+                          <div class="inner-box">
+
+                          </div>
+
                       </figure>
                       <div class="lower-content">
-                          <div class="category">Jan 05, 2017</div>
+                          <div class="category"><?php echo $row_img['date_change']; ?></div>
                           <div class="content">
                               <a href="news-details.php?id=<?php echo $row_img['news_id']; ?>"><h4><?php echo $row_img['news_topic']; ?></h4></a>
-                              <div class="text"><p><?php echo $row_img['news_topic']; ?></p>
-                              </div>
+                              <div class="text"><p><?php echo $row_img['news_topic']; ?></p></div>
                           </div>
                       </div>
                   </div>
               </article>
-          <?php
-            }
-          }
-          ?>
+              <?php
+                }
+              }
+              ?>
           </div>
       </div>
   </section>

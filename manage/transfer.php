@@ -1,6 +1,6 @@
 <?php
-require_once '../libs/conn.php';
-$de_titile = "คุณต้องการลบรูปภาพหรือไม่ ?";
+require_once '../function/session.php';
+$de_titile = "คุณต้องการลบข้อมูลหรือไม่ ?";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,33 +39,35 @@ $de_titile = "คุณต้องการลบรูปภาพหรือ
               <thead>
                 <tr>
                   <th class="text-center">Name</th>
-                  <th class="text-center">Details</th>
+                  <th class="text-center">Phone</th>
                   <th class="text-center">Image</th>
                   <th class="text-center" width="140px">Status</th>
-                  <th class="text-center" width="140px">Manage</th>
+                  <th class="text-center" width="140px">Date Create</th>
+                  <th class="text-center" width="160px">Manage</th>
                 </tr>
               </thead>
               <tbody>
                 <?php
-                $query  = "SELECT * FROM t_slide";
+                $query  = "SELECT * FROM t_receipt";
                 $res = mysqli_query($conn,$query);
                 while($row = mysqli_fetch_assoc($res))
                 {
                 ?>
                 <tr>
-                  <td><?php echo $row["slide_title"]; ?></td>
-                  <td><?php echo $row["slide_detail"]; ?></td>
-                  <td class="text-center"><img src="../images/slide/<?php echo $row['slide_img']; ?>" width="auto" height="50px"></td>
+                  <td><?php echo $row["rec_name"]; ?></td>
+                  <td><?php echo $row["rec_phone"]; ?></td>
+                  <td class="text-center"><img src="../images/slips/<?php echo $row['rec_img']; ?>" width="auto" height="50px"></td>
                   <td class="text-center">
-                    <?php if ($row['slide_hot'] == "1"){?>
-                      <a href="../function/change-status0.php?id=<?= $row["slide_id"]; ?>" class="btn btn-success btn-sm"><i class="fa fa-refresh" aria-hidden="true"></i> แสดง</a>
+                    <?php if ($row['rec_state'] == "0"){?>
+                      <a href="../function/change-rec-status-1.php?id=<?= $row["rec_id"]; ?>" class="btn btn-danger btn-sm"><i class="fa fa-refresh" aria-hidden="true"></i> รอการตรวจสอบ</a>
                     <?php }else { ?>
-                      <a href="../function/change-status1.php?id=<?= $row["slide_id"]; ?>" class="btn btn-danger btn-sm"><i class="fa fa-refresh" aria-hidden="true"></i> ไม่แสดง</a>
+                      <a href="../function/change-rec-status-0.php?id=<?= $row["rec_id"]; ?>" class="btn btn-success btn-sm"><i class="fa fa-refresh" aria-hidden="true"></i> อนุมัติ</a>
                     <?php } ?>
                   </td>
+                  <td><?php echo $row["date_create"]; ?></td>
                   <td class="text-center">
-                    <a href="slide-edit.php?id=<?= $row["slide_id"]; ?>" class="btn btn-outline-warning btn-sm" role="button" aria-pressed="true"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> แก้ไข</a>
-                    <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#deleteModal" data-href="../function/slide-delete.php?id=<?= $row["slide_id"]; ?>"><i class="fa fa-trash-o fa-lg"></i>
+                    <a href="tranfer-detail.php?id=<?= $row["rec_id"]; ?>" class="btn btn-outline-info btn-sm" role="button" aria-pressed="true"><i class="fa fa-search" aria-hidden="true"></i> ดูรายละเอียด</a>
+                    <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#deleteModal" data-href="../function/receipt-delete.php?id=<?= $row["rec_id"]; ?>"><i class="fa fa-trash-o fa-lg"></i>
                       ลบ
                     </button>
                   </td>

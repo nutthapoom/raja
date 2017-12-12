@@ -1,5 +1,5 @@
 <?php
-require_once '../libs/conn.php';
+require_once './session.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -50,7 +50,7 @@ require_once '../libs/conn.php';
   $strSQL = "INSERT INTO t_cause";
   $strSQL .= "(cause_id, cause_topic, cause_detail, cause_img,  cause_hot, date_create, date_change, ctype_id, mem_id)";
   $strSQL .= "VALUES ";
-  $strSQL .= "('','$n_topic','$n_detail','$new_file_name','$n_hot','".date('Y-m-d H:i:s')."','".date('Y-m-d H:i:s')."','$t_id','1')";
+  $strSQL .= "('','$n_topic','$n_detail','$new_file_name','$n_hot','".date('Y-m-d H:i:s')."','".date('Y-m-d H:i:s')."','$t_id','$s_login_id')";
   $objQuery = mysqli_query($conn,$strSQL);
 
   if($objQuery){

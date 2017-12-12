@@ -1,5 +1,5 @@
 <?php
-require_once '../libs/conn.php';
+require_once '../function/session.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -101,7 +101,7 @@ require_once '../libs/conn.php';
     <footer class="sticky-footer">
       <div class="container">
         <div class="text-center">
-          <small>Copyright © Your Website 2017</small>
+          <small>Copyright © Rajavithihospitalfoundation 2017</small>
         </div>
       </div>
     </footer>

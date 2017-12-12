@@ -1,5 +1,5 @@
 <?php
-require_once '../libs/conn.php';
+require_once './session.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +14,7 @@ require_once '../libs/conn.php';
   date_default_timezone_set("Asia/Bangkok");
   $s_id = 	$_POST['s_id'];
   $s_title = $_POST['inputName'];
-  $s_detail = $_POST['inputDetail'];
+  // $s_detail = $_POST['inputDetail'];
 
   if (is_uploaded_file($_FILES['inputImg']['tmp_name'])){
     //Delete old Image
@@ -22,10 +22,10 @@ require_once '../libs/conn.php';
     $result_img = mysqli_query($conn, $sql_select);
     $row_img = mysqli_fetch_assoc($result_img);
     $img_old = $row_img['slide_img'];
-    unlink("../images/slide/".$img_old);
+    unlink("../images/slider/".$img_old);
 
     //upload image
-    $image_path = "../images/slide/"; //the folder that stores your image
+    $image_path = "../images/slider/"; //the folder that stores your image
     $image_ext = pathinfo(basename($_FILES['inputImg']['name']), PATHINFO_EXTENSION);//นามสกุลไฟล์
     $new_image_name = 's_'.uniqid().".".$image_ext;//uniqid() ค่าสุ่ม
 
@@ -52,7 +52,7 @@ require_once '../libs/conn.php';
   }
 
   //Update Data
-  $strSQL = "UPDATE t_slide SET slide_title = '$s_title', slide_detail = '$s_detail'";
+  $strSQL = "UPDATE t_slide SET slide_title = '$s_title'";
   $strSQL .= "WHERE slide_id = '$s_id'";
 
   $objQuery = mysqli_query($conn,$strSQL);
